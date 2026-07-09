@@ -830,6 +830,34 @@
   .form-note.ok{ color:var(--gold-bright); }
   .form-note.error{ color:#ff5b5b; }
 
+  .final-direct{
+    margin:44px auto 0;
+    max-width:520px;
+    padding-top:32px;
+    border-top:1px solid var(--line);
+  }
+  .final-direct-label{
+    display:block;
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:16px;
+  }
+  .final-direct-links{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+    flex-wrap:wrap;
+  }
+  .final-direct-btn{
+    display:inline-flex; align-items:center; gap:9px;
+    font-size:14px;
+  }
+  .final-direct-btn svg{ stroke:var(--gold-bright); flex:0 0 auto; }
+
   /* ---------- FOOTER ---------- */
   footer{
     padding:40px 0;
@@ -1151,6 +1179,20 @@
       <button type="submit" class="btn btn-gold final-cta" id="finalCta">Quiero mi web y mi sistema propio</button>
       <p class="form-note" id="formNote" aria-live="polite"></p>
     </form>
+
+    <div class="final-direct">
+      <span class="final-direct-label">O si lo prefieres, contacta directo</span>
+      <div class="final-direct-links">
+        <a class="btn btn-ghost final-direct-btn" href="https://wa.me/34624267058?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20mi%20web" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" width="18" height="18"><path d="M3 21l1.65-4.95A8.5 8.5 0 1 1 8.05 19.5L3 21Z" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 9.5c0 3.5 2.5 6 6 6 .5 0 1-.5 1-1l-.3-1.5-2-1-1 1c-1-.5-2-1.5-2.5-2.5l1-1-1-2L9 7c-.5 0-.5.5-.5 2.5Z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          +34 624 267 058
+        </a>
+        <a class="btn btn-ghost final-direct-btn" href="mailto:contacto@73webs.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" width="18" height="18"><path d="M3 6h18v12H3z"/><path d="m3 7 9 6 9-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          contacto@73webs.com
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -2206,7 +2248,7 @@ if(window.matchMedia("(pointer:fine) and (min-width: 821px)").matches){
 
 /* ---------- final form -> n8n webhook ---------- */
 (function(){
-  const N8N_WEBHOOK_URL = "TODO: pega aqui tu URL de webhook n8n";
+  const N8N_WEBHOOK_URL = "https://n8n.akidojo.dev/webhook/b63f864a-d673-4623-b8ee-bfff1bacb6f2";
 
   const form = document.getElementById("finalForm");
   const note = document.getElementById("formNote");
