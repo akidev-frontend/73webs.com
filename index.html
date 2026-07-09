@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>73webs — Tu casa digital, no un piso de alquiler</title>
-<meta name="description" content="Deja de depender de Instagram, Doctoralia o Google Maps. Construimos tu propia consulta digital: una web que es tuya de verdad.">
+<title>73webs — ¿Qué pasa con tu negocio si mañana cierra Instagram?</title>
+<meta name="description" content="Para pequeños negocios, comercios y PYMEs. Creamos tu web propia, tu contacto directo por WhatsApp y tu ficha de Google para que nadie pueda apagarte el negocio con un solo clic.">
 <link rel="canonical" href="https://73webs.com/">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://73webs.com/">
-<meta property="og:title" content="73webs — Tu casa digital, no un piso de alquiler">
-<meta property="og:description" content="Deja de depender de Instagram, Doctoralia o Google Maps. Construimos tu propia consulta digital: una web que es tuya de verdad.">
+<meta property="og:title" content="73webs — ¿Qué pasa con tu negocio si mañana cierra Instagram?">
+<meta property="og:description" content="Para pequeños negocios, comercios y PYMEs. Creamos tu web propia, tu contacto directo por WhatsApp y tu ficha de Google para que nadie pueda apagarte el negocio con un solo clic.">
 <meta property="og:locale" content="es_ES">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="73webs — Tu casa digital, no un piso de alquiler">
-<meta name="twitter:description" content="Deja de depender de Instagram, Doctoralia o Google Maps. Construimos tu propia consulta digital: una web que es tuya de verdad.">
+<meta name="twitter:title" content="73webs — ¿Qué pasa con tu negocio si mañana cierra Instagram?">
+<meta name="twitter:description" content="Para pequeños negocios, comercios y PYMEs. Creamos tu web propia, tu contacto directo por WhatsApp y tu ficha de Google para que nadie pueda apagarte el negocio con un solo clic.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -232,11 +232,11 @@
   /* ---------- HERO ---------- */
   .hero{
     position:relative;
-    min-height:110vh;
+    min-height:100vh;
     display:flex;
     flex-direction:column;
-    justify-content:flex-start;
-    padding:190px 0 100px;
+    justify-content:center;
+    padding:140px 0 100px;
     overflow:hidden;
     background:radial-gradient(120% 90% at 50% 0%, #2E1B08 0%, #171B24 45%, #0D0F14 100%);
   }
@@ -364,6 +364,7 @@
     border-top:1px solid var(--line);
     border-bottom:1px solid var(--line);
     overflow:hidden;
+    padding-top:80px;
   }
   .pain-fog{
     position:absolute;
@@ -381,7 +382,7 @@
   }
   .pain .wrap{ position:relative; z-index:2; }
   .pain-head{
-    max-width:680px; margin:0 auto 70px;
+    max-width:680px; margin:0 auto 50px;
     text-align:center;
   }
   .pain-head .eyebrow{ justify-content:center; }
@@ -566,6 +567,7 @@
     position:relative;
     background:var(--bg-solution);
     overflow:hidden;
+    padding-top:70px;
   }
   .shapegrid-canvas{
     width:100%;
@@ -616,15 +618,17 @@
   .features{
     background:var(--bg-solution);
     border-top:1px solid var(--line);
+    padding-top:80px;
+    padding-bottom:60px;
   }
-  .features-head{ margin:0 auto 60px; max-width:600px; text-align:center; }
+  .features-head{ margin:0 auto 30px; max-width:600px; text-align:center; }
   .features-head .eyebrow{ justify-content:center; }
   .features-head h2{ font-size:clamp(1.9rem,3.2vw,2.5rem); }
 
   /* ---- ScrollStack (vanilla GSAP port, no React/Lenis needed) ---- */
   .stack-wrap{
     position:relative;
-    padding-bottom:26vh;
+    padding-bottom:8vh;
   }
   .stack-card{
     position:sticky;
@@ -652,7 +656,7 @@
   }
 
   @media (min-width:901px){
-    .stack-card{ top:calc(var(--stack-top) + 110px); }
+    .stack-card{ top:calc(var(--stack-top) + 60px); }
   }
 
   .feature-icon{
@@ -736,10 +740,26 @@
 
   /* ---------- FINAL CTA ---------- */
   .final{
-    background:radial-gradient(70% 60% at 50% 0%, rgba(255,138,0,0.08), transparent 70%), var(--bg);
+    position:relative;
+    background:var(--bg);
     text-align:center;
     padding:160px 0 140px;
+    overflow:hidden;
   }
+  .final-waves{
+    position:absolute; inset:0;
+    z-index:0;
+    opacity:0.55;
+  }
+  .final-waves canvas{ display:block; width:100%; height:100%; }
+  .final::after{
+    content:'';
+    position:absolute; inset:0;
+    z-index:1;
+    background:radial-gradient(70% 60% at 50% 0%, rgba(255,138,0,0.12), transparent 70%), radial-gradient(100% 100% at 50% 50%, transparent 40%, var(--bg) 92%);
+    pointer-events:none;
+  }
+  .final .wrap{ position:relative; z-index:2; }
   .final-eyebrow{ justify-content:center; }
   .final-eyebrow::before{ display:none; }
   .final h2{
@@ -808,6 +828,7 @@
     min-height:18px;
   }
   .form-note.ok{ color:var(--gold-bright); }
+  .form-note.error{ color:#ff5b5b; }
 
   /* ---------- FOOTER ---------- */
   footer{
@@ -840,14 +861,14 @@
   /* ---------- cookie consent theming ---------- */
   #cc-main{
     --cc-bg:var(--bg-soft);
-    --cc-text:var(--ink-dim);
+    --cc-text:var(--ink);
     --cc-btn-primary-bg:var(--gold);
     --cc-btn-primary-color:#0D0F14;
     --cc-btn-primary-hover-bg:var(--gold-bright);
-    --cc-btn-secondary-bg:transparent;
+    --cc-btn-secondary-bg:var(--surface);
     --cc-btn-secondary-color:var(--ink);
     --cc-btn-secondary-border-color:var(--line-strong);
-    --cc-btn-secondary-hover-bg:var(--surface);
+    --cc-btn-secondary-hover-bg:#2A303B;
     --cc-toggle-on-bg:var(--gold);
     --cc-toggle-off-bg:var(--line-strong);
     --cc-cookie-category-block-bg:var(--surface);
@@ -856,7 +877,8 @@
     --cc-overlay-bg:rgba(13,15,20,0.7);
     font-family:var(--sans);
   }
-  #cc-main .cm__title, #cc-main .pm__title{ font-family:var(--display); }
+  #cc-main .cm__title, #cc-main .pm__title{ font-family:var(--display); color:#FFFFFF; }
+  #cc-main .cm__desc, #cc-main .pm__section-desc, #cc-main .cm__texts p, #cc-main .pm__texts p{ color:#FFFFFF; }
   #cc-main a{ color:var(--gold); }
 
   @media (prefers-reduced-motion: reduce){
@@ -910,13 +932,14 @@
   <div class="hero-grain" aria-hidden="true"></div>
 
   <div class="wrap hero-inner">
+    <p class="eyebrow" style="justify-content:center;">Para pequeños negocios, comercios y PYMEs</p>
     <h1 class="vp-target">
-      <span class="platform-box vp-skip"><span class="platform-word" id="platformWord">Instagram</span></span> <span class="casa-emphasis">no es tu casa.</span><br>
-      <span class="line-cold">Estás viviendo de alquiler en un piso que no es tuyo.</span>
+      ¿Qué pasa con tu negocio si mañana cierra <span class="platform-box vp-skip"><span class="platform-word" id="platformWord">Instagram</span></span>?<br>
+      <span class="line-cold">Si mañana <span class="owner-box"><span class="owner-word" id="ownerWord">Meta</span></span> se levanta de mal humor, te quedas sin clientes.</span>
     </h1>
-    <p class="hero-sub">Si mañana <span class="owner-box"><span class="owner-word" id="ownerWord">Meta</span></span> se levanta de mal humor, cambia el algoritmo o te banea la cuenta, te quedas sin pacientes. Así de simple. Deja de depender de un tercero y construye tu propia consulta digital de la que nadie te pueda echar.</p>
+    <p class="hero-sub">Si toda tu clientela está en una red social, tu negocio está en terreno alquilado. Creamos tu web propia, tu contacto directo por WhatsApp y tu ficha de Google para que nadie pueda apagarte el negocio con un solo clic. Sin tecnicismos, sin complicaciones y gestionado por mí.</p>
     <div class="hero-cta">
-      <a href="#final" class="btn btn-gold" id="heroCta">Quiero ser dueño de mi negocio online</a>
+      <a href="#final" class="btn btn-gold" id="heroCta">Quiero independizar mi negocio ya</a>
     </div>
   </div>
 </section>
@@ -939,8 +962,8 @@
   <div class="pain-fog" id="painFog"></div>
   <div class="wrap">
     <div class="pain-head">
-      <h2 class="vp-target blur-target">¿Qué te está pasando?</h2>
-      <p class="pain-lede">Montaste tu consulta para curar personas, no para ser esclavo de una aplicación móvil.</p>
+      <h2 class="vp-target blur-target">¿Estás construyendo tu castillo en una red social?</h2>
+      <p class="pain-lede">Muchos pequeños negocios piensan: "¿Para qué quiero una web si ya tengo Instagram o Facebook?". El problema es que esas plataformas no son tuyas.</p>
     </div>
 
     <div class="bento-grid" id="painBento">
@@ -948,18 +971,18 @@
         <div class="bento-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M3 21c2-6 6-9 9-9s7 3 9 9M9 8a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <span class="bento-label">El pantano</span>
-        <h3>Cero control</h3>
-        <p>Depender al 100% de las redes sociales para llenar tu agenda es como construir un chalet de lujo <strong>sobre un pantano</strong>.</p>
+        <span class="bento-label">Terreno alquilado</span>
+        <h3>No es tuya</h3>
+        <p>Esas plataformas <strong>no son tuyas</strong>. Si mañana cambia el algoritmo, te hackean la cuenta o la red social pasa de moda, pierdes el contacto con tus clientes de la noche a la mañana.</p>
       </div>
 
       <div class="bento-card bento-card--mid-a">
         <div class="bento-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 8v4M12 16h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <span class="bento-label">Vanidad</span>
-        <h3>Mirando likes</h3>
-        <p>Pasas el día pendiente de si ese post ha tenido <strong>likes</strong>.</p>
+        <span class="bento-label">Vuelta a cero</span>
+        <h3>Empiezas de cero</h3>
+        <p>Y mientras tú empiezas de cero, tu <strong>competencia</strong> se queda con tus clientes.</p>
       </div>
 
       <div class="bento-card bento-card--mid-b">
@@ -967,8 +990,8 @@
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M3 12h18M3 6h18M3 18h18" stroke-linecap="round"/></svg>
         </div>
         <span class="bento-label">Reglas ajenas</span>
-        <h3>Doctoralia / Maps</h3>
-        <p><strong>Doctoralia</strong> cambia sus condiciones o un competidor te adelanta en <strong>Google Maps</strong> por una reseña que ni sabes si es real.</p>
+        <h3>Un tercero decide</h3>
+        <p>No dejes el futuro de tu negocio en manos de <strong>un tercero</strong> que no te conoce ni te debe nada.</p>
       </div>
 
       <div class="bento-card bento-card--wide">
@@ -976,9 +999,9 @@
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M13 2 3 14h8l-1 8 10-12h-8l1-8Z" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <div class="bento-copy">
-          <span class="bento-label">El robot manda</span>
-          <h3>Tus ingresos, sus reglas</h3>
-          <p>Si la plataforma cambia las reglas del juego, tus <strong>ingresos caen</strong>. Y tú, mientras tanto, haciendo vídeos para caerle bien a un robot que no te conoce.</p>
+          <span class="bento-label">La competencia sí tiene web</span>
+          <h3>Quien tiene web propia gana</h3>
+          <p>Tu competencia, la que <strong>sí tiene web propia</strong>, se queda con tus clientes mientras tú dependes de un algoritmo. Es hora de tener tu propia casa en internet.</p>
         </div>
       </div>
     </div>
@@ -1028,8 +1051,8 @@
     </div>
     <div class="solution-copy reveal">
       <p>Con <strong>73webs.com</strong> creamos y gestionamos tu página web para que dejes de mendigar atención en plataformas ajenas. Aquí mandas tú.</p>
-      <p>Nadie te va a cambiar el algoritmo, nadie te va a cobrar comisiones raras por paciente y nadie va a ocultar tus publicaciones porque hoy no has bailado en un vídeo.</p>
-      <p>Un sitio serio, limpio y profesional para captar a esos pacientes que buscan un servicio de calidad y que pasan olímpicamente de perder el tiempo en redes sociales.</p>
+      <p>Nadie te va a cambiar el algoritmo, nadie te va a cobrar comisiones raras por cliente y nadie va a ocultar tus publicaciones porque hoy no has bailado en un vídeo.</p>
+      <p>Un sitio serio, limpio y profesional para captar a esos clientes que buscan un servicio de calidad y que pasan olímpicamente de perder el tiempo en redes sociales.</p>
     </div>
   </div>
 </section>
@@ -1043,38 +1066,31 @@
 
     <div class="stack-wrap" id="stackWrap">
       <div class="stack-card" style="--stack-top:130px; top:130px; z-index:1;">
-        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18Z"/></svg></div>
         <div class="feature-copy">
-          <h3>Web activa 24/7</h3>
-          <p>Tu consulta digital abierta siempre, incluso cuando estás durmiendo o de vacaciones.</p>
+          <h3>Tu nombre es tuyo</h3>
+          <p>Nada de subdominios raros. Tendrás tu propia dirección (TuNegocio.com) con un diseño adaptado a tu gusto. Una web que trabaja para ti las 24 horas, elegante y profesional.</p>
         </div>
       </div>
       <div class="stack-card" style="--stack-top:146px; top:146px; z-index:2;">
-        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18Z"/></svg></div>
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <div class="feature-copy">
-          <h3>Dominio propio</h3>
-          <p>Un nombre que es tuyo y de nadie más (tuclinica.com), para que dejes de usar enlaces raros en tu perfil.</p>
+          <h3>Contacto directo, sin intermediarios</h3>
+          <p>Un botón de WhatsApp para que tus clientes te escriban al momento, y un código QR con tu tarjeta de contacto: lo escanean y tu negocio se guarda solo en su agenda. Nada de plataformas de terceros por medio.</p>
         </div>
       </div>
       <div class="stack-card" style="--stack-top:162px; top:162px; z-index:3;">
-        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M3 6h18v12H3z"/><path d="m3 7 9 6 9-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"/><path d="m20 20-3.2-3.2" stroke-linecap="round"/></svg></div>
         <div class="feature-copy">
-          <h3>Formulario de contacto directo</h3>
-          <p>Para que los pacientes te escriban a tu email, sin intermediarios ni plataformas que te cobren por el mensaje.</p>
+          <h3>Existir en Google</h3>
+          <p>No te prometo salir el primero en todo el mundo. Sí te doy el alta correcta para que cuando alguien en tu barrio busque lo que tú haces, Google sepa quién eres, dónde estás y cómo contactarte con tu ficha de Google My Business.</p>
         </div>
       </div>
       <div class="stack-card" style="--stack-top:178px; top:178px; z-index:4;">
-        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"/><path d="m20 20-3.2-3.2" stroke-linecap="round"/></svg></div>
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <div class="feature-copy">
-          <h3>SEO básico</h3>
-          <p>Hacemos el trabajo técnico para que Google indexe tu web y la gente te encuentre por tu nombre o especialidad.</p>
-        </div>
-      </div>
-      <div class="stack-card" style="--stack-top:194px; top:194px; z-index:5;">
-        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M4 4h16v16H4z"/><path d="m4 6 8 6 8-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <div class="feature-copy">
-          <h3>Newsletter integrada</h3>
-          <p>Un sistema para enviar correos a tus pacientes, fidelizarlos y recordarles su revisión, sin depender de Instagram.</p>
+          <h3>Tú vendes, yo me ocupo del resto</h3>
+          <p>Olvídate de actualizaciones, códigos y cosas raras de informáticos. Yo me encargo de que todo funcione para que tú solo te preocupes de atender tu negocio.</p>
         </div>
       </div>
     </div>
@@ -1085,18 +1101,18 @@
 <section class="objection" id="objecion">
   <div class="objection-stripe"></div>
   <div class="wrap objection-inner">
-    <blockquote class="vp-target">Esto no es magia SEO.</blockquote>
-    <p>No te vamos a prometer que vas a salir el primero en Google mañana por la mañana por la palabra "dentista" o "psicólogo". El que te prometa eso en un correo de ventas te está mintiendo descaradamente.</p>
-    <p>Lo que te garantizamos es una web sólida, profesional, que funciona perfectamente y que te da la independencia total de no tener que lamerle los pies a ninguna red social para conseguir pacientes.</p>
+    <blockquote class="vp-target">Lo que SÍ hago y lo que NO hago.</blockquote>
+    <p>Aquí no hay letra pequeña. Te monto un sistema sólido, propio y que funciona. Pero soy honesto: yo hago SEO básico. Te aseguro que Google sabrá quién eres y te encontrará de forma local.</p>
+    <p>Si lo que buscas es una campaña agresiva para competir con multinacionales y salir el primero en todo el país, te derivaré felizmente a especialistas en SEO puro. Yo prefiero darte las herramientas reales que tu PYME necesita hoy para estar protegida y vender más.</p>
 
     <div class="objection-split">
       <div class="no">
         <h4>Este no es tu sitio si buscas...</h4>
-        <p>Milagros automáticos de marketing digital de esos que prometen hacerte rico en dos días.</p>
+        <p>Una campaña agresiva de SEO puro para salir el primero en todo el país y competir con multinacionales.</p>
       </div>
       <div class="yes">
         <h4>Sí es tu sitio si buscas...</h4>
-        <p>Estabilidad, propiedad y una consulta digital que nadie te pueda quitar.</p>
+        <p>Las herramientas reales que tu PYME necesita hoy para estar protegida, vender más y no depender de nadie.</p>
       </div>
     </div>
   </div>
@@ -1105,10 +1121,11 @@
 
 <!-- ================= FINAL CTA ================= -->
 <section class="final" id="final">
+  <div class="final-waves" id="finalWaves"></div>
   <div class="wrap">
-    <h2 class="vp-target">El algoritmo de Instagram volverá a cambiar <em>el mes que viene</em>. Siempre lo hace.</h2>
-    <p class="final-copy">Puedes esperar a que la siguiente actualización te pille desprevenido y te baje las visitas a la mitad, o puedes empezar a construir tu propia casa hoy mismo.</p>
-    <p class="final-limit">Trabajamos con un número limitado de profesionales al mes para que cada web salga perfecta.</p>
+    <h2 class="vp-target">Deja de pagar alquiler en las redes sociales. <em>Compra tu propia casa digital.</em></h2>
+    <p class="final-copy">Es más fácil y rápido de lo que crees. Cuéntame a qué se dedica tu negocio y empezamos a diseñar tu libertad online.</p>
+    <p class="final-limit">Trabajamos con un número limitado de negocios al mes para que cada web salga perfecta.</p>
 
     <form class="final-form" id="finalForm" novalidate>
       <div class="form-row">
@@ -1127,11 +1144,11 @@
           <input type="tel" id="fPhone" name="telefono" placeholder="600 000 000" required>
         </div>
         <div class="form-field">
-          <label for="fBusiness">Tu clínica / consulta</label>
+          <label for="fBusiness">Tu negocio</label>
           <input type="text" id="fBusiness" name="negocio" placeholder="Nombre del negocio">
         </div>
       </div>
-      <button type="submit" class="btn btn-gold final-cta" id="finalCta">Quiero mi propia web ahora</button>
+      <button type="submit" class="btn btn-gold final-cta" id="finalCta">Quiero mi web y mi sistema propio</button>
       <p class="form-note" id="formNote" aria-live="polite"></p>
     </form>
   </div>
@@ -1158,6 +1175,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/ogl@1.0.11/dist/ogl.umd.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.1.0/dist/cookieconsent.umd.js"></script>
 <script>
 gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin);
@@ -1465,6 +1483,263 @@ if(solutionGridCanvas){
   });
 }
 
+/* ---------- LineWaves (vanilla ogl port of react-bits LineWaves) ---------- */
+function initLineWaves(container, opts){
+  const { Renderer, Program, Mesh, Triangle } = window.ogl;
+
+  function hexToVec3(hex){
+    const h = hex.replace('#','');
+    return [
+      parseInt(h.slice(0,2),16)/255,
+      parseInt(h.slice(2,4),16)/255,
+      parseInt(h.slice(4,6),16)/255
+    ];
+  }
+
+  const speed              = opts.speed ?? 0.3;
+  const innerLineCount     = opts.innerLineCount ?? 32.0;
+  const outerLineCount     = opts.outerLineCount ?? 36.0;
+  const warpIntensity      = opts.warpIntensity ?? 1.0;
+  const rotation            = opts.rotation ?? -45;
+  const edgeFadeWidth       = opts.edgeFadeWidth ?? 0.0;
+  const colorCycleSpeed     = opts.colorCycleSpeed ?? 1.0;
+  const brightness          = opts.brightness ?? 0.2;
+  const color1               = opts.color1 ?? '#ffffff';
+  const color2               = opts.color2 ?? '#ffffff';
+  const color3               = opts.color3 ?? '#ffffff';
+  const enableMouseInteraction = opts.enableMouseInteraction ?? true;
+  const mouseInfluence      = opts.mouseInfluence ?? 2.0;
+
+  const vertexShader = `
+attribute vec2 uv;
+attribute vec2 position;
+varying vec2 vUv;
+void main() {
+  vUv = uv;
+  gl_Position = vec4(position, 0, 1);
+}
+`;
+
+  const fragmentShader = `
+precision highp float;
+
+uniform float uTime;
+uniform vec3 uResolution;
+uniform float uSpeed;
+uniform float uInnerLines;
+uniform float uOuterLines;
+uniform float uWarpIntensity;
+uniform float uRotation;
+uniform float uEdgeFadeWidth;
+uniform float uColorCycleSpeed;
+uniform float uBrightness;
+uniform vec3 uColor1;
+uniform vec3 uColor2;
+uniform vec3 uColor3;
+uniform vec2 uMouse;
+uniform float uMouseInfluence;
+uniform bool uEnableMouse;
+
+#define HALF_PI 1.5707963
+
+float hashF(float n) {
+  return fract(sin(n * 127.1) * 43758.5453123);
+}
+
+float smoothNoise(float x) {
+  float i = floor(x);
+  float f = fract(x);
+  float u = f * f * (3.0 - 2.0 * f);
+  return mix(hashF(i), hashF(i + 1.0), u);
+}
+
+float displaceA(float coord, float t) {
+  float result = sin(coord * 2.123) * 0.2;
+  result += sin(coord * 3.234 + t * 4.345) * 0.1;
+  result += sin(coord * 0.589 + t * 0.934) * 0.5;
+  return result;
+}
+
+float displaceB(float coord, float t) {
+  float result = sin(coord * 1.345) * 0.3;
+  result += sin(coord * 2.734 + t * 3.345) * 0.2;
+  result += sin(coord * 0.189 + t * 0.934) * 0.3;
+  return result;
+}
+
+vec2 rotate2D(vec2 p, float angle) {
+  float c = cos(angle);
+  float s = sin(angle);
+  return vec2(p.x * c - p.y * s, p.x * s + p.y * c);
+}
+
+void main() {
+  vec2 coords = gl_FragCoord.xy / uResolution.xy;
+  coords = coords * 2.0 - 1.0;
+  coords = rotate2D(coords, uRotation);
+
+  float halfT = uTime * uSpeed * 0.5;
+  float fullT = uTime * uSpeed;
+
+  float mouseWarp = 0.0;
+  if (uEnableMouse) {
+    vec2 mPos = rotate2D(uMouse * 2.0 - 1.0, uRotation);
+    float mDist = length(coords - mPos);
+    mouseWarp = uMouseInfluence * exp(-mDist * mDist * 4.0);
+  }
+
+  float warpAx = coords.x + displaceA(coords.y, halfT) * uWarpIntensity + mouseWarp;
+  float warpAy = coords.y - displaceA(coords.x * cos(fullT) * 1.235, halfT) * uWarpIntensity;
+  float warpBx = coords.x + displaceB(coords.y, halfT) * uWarpIntensity + mouseWarp;
+  float warpBy = coords.y - displaceB(coords.x * sin(fullT) * 1.235, halfT) * uWarpIntensity;
+
+  vec2 fieldA = vec2(warpAx, warpAy);
+  vec2 fieldB = vec2(warpBx, warpBy);
+  vec2 blended = mix(fieldA, fieldB, mix(fieldA, fieldB, 0.5));
+
+  float fadeTop = smoothstep(uEdgeFadeWidth, uEdgeFadeWidth + 0.4, blended.y);
+  float fadeBottom = smoothstep(-uEdgeFadeWidth, -(uEdgeFadeWidth + 0.4), blended.y);
+  float vMask = 1.0 - max(fadeTop, fadeBottom);
+
+  float tileCount = mix(uOuterLines, uInnerLines, vMask);
+  float scaledY = blended.y * tileCount;
+  float nY = smoothNoise(abs(scaledY));
+
+  float ridge = pow(
+    step(abs(nY - blended.x) * 2.0, HALF_PI) * cos(2.0 * (nY - blended.x)),
+    5.0
+  );
+
+  float lines = 0.0;
+  for (float i = 1.0; i < 3.0; i += 1.0) {
+    lines += pow(max(fract(scaledY), fract(-scaledY)), i * 2.0);
+  }
+
+  float pattern = vMask * lines;
+
+  float cycleT = fullT * uColorCycleSpeed;
+  float rChannel = (pattern + lines * ridge) * (cos(blended.y + cycleT * 0.234) * 0.5 + 1.0);
+  float gChannel = (pattern + vMask * ridge) * (sin(blended.x + cycleT * 1.745) * 0.5 + 1.0);
+  float bChannel = (pattern + lines * ridge) * (cos(blended.x + cycleT * 0.534) * 0.5 + 1.0);
+
+  vec3 col = (rChannel * uColor1 + gChannel * uColor2 + bChannel * uColor3) * uBrightness;
+  float alpha = clamp(length(col), 0.0, 1.0);
+
+  gl_FragColor = vec4(col, alpha);
+}
+`;
+
+  const renderer = new Renderer({ alpha: true, premultipliedAlpha: false });
+  const gl = renderer.gl;
+  gl.clearColor(0, 0, 0, 0);
+
+  let program;
+  let currentMouse = [0.5, 0.5];
+  let targetMouse = [0.5, 0.5];
+
+  function handleMouseMove(e){
+    const rect = gl.canvas.getBoundingClientRect();
+    targetMouse = [
+      (e.clientX - rect.left) / rect.width,
+      1.0 - (e.clientY - rect.top) / rect.height
+    ];
+  }
+  function handleMouseLeave(){ targetMouse = [0.5, 0.5]; }
+
+  function resize(){
+    renderer.setSize(container.offsetWidth, container.offsetHeight);
+    if(program){
+      program.uniforms.uResolution.value = [gl.canvas.width, gl.canvas.height, gl.canvas.width / gl.canvas.height];
+    }
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  const geometry = new Triangle(gl);
+  const rotationRad = (rotation * Math.PI) / 180;
+  program = new Program(gl, {
+    vertex: vertexShader,
+    fragment: fragmentShader,
+    uniforms: {
+      uTime: { value: 0 },
+      uResolution: { value: [gl.canvas.width, gl.canvas.height, gl.canvas.width / gl.canvas.height] },
+      uSpeed: { value: speed },
+      uInnerLines: { value: innerLineCount },
+      uOuterLines: { value: outerLineCount },
+      uWarpIntensity: { value: warpIntensity },
+      uRotation: { value: rotationRad },
+      uEdgeFadeWidth: { value: edgeFadeWidth },
+      uColorCycleSpeed: { value: colorCycleSpeed },
+      uBrightness: { value: brightness },
+      uColor1: { value: hexToVec3(color1) },
+      uColor2: { value: hexToVec3(color2) },
+      uColor3: { value: hexToVec3(color3) },
+      uMouse: { value: new Float32Array([0.5, 0.5]) },
+      uMouseInfluence: { value: mouseInfluence },
+      uEnableMouse: { value: enableMouseInteraction }
+    }
+  });
+
+  const mesh = new Mesh(gl, { geometry, program });
+  container.appendChild(gl.canvas);
+
+  if(enableMouseInteraction){
+    gl.canvas.addEventListener('mousemove', handleMouseMove);
+    gl.canvas.addEventListener('mouseleave', handleMouseLeave);
+  }
+
+  let animationFrameId;
+  function update(time){
+    animationFrameId = requestAnimationFrame(update);
+    program.uniforms.uTime.value = time * 0.001;
+
+    if(enableMouseInteraction){
+      currentMouse[0] += 0.05 * (targetMouse[0] - currentMouse[0]);
+      currentMouse[1] += 0.05 * (targetMouse[1] - currentMouse[1]);
+      program.uniforms.uMouse.value[0] = currentMouse[0];
+      program.uniforms.uMouse.value[1] = currentMouse[1];
+    } else {
+      program.uniforms.uMouse.value[0] = 0.5;
+      program.uniforms.uMouse.value[1] = 0.5;
+    }
+
+    renderer.render({ scene: mesh });
+  }
+  animationFrameId = requestAnimationFrame(update);
+
+  return {
+    destroy(){
+      cancelAnimationFrame(animationFrameId);
+      window.removeEventListener('resize', resize);
+      if(enableMouseInteraction){
+        gl.canvas.removeEventListener('mousemove', handleMouseMove);
+        gl.canvas.removeEventListener('mouseleave', handleMouseLeave);
+      }
+      container.removeChild(gl.canvas);
+      gl.getExtension('WEBGL_lose_context')?.loseContext();
+    }
+  };
+}
+
+const finalWavesEl = document.getElementById('finalWaves');
+if(finalWavesEl && typeof window.ogl !== 'undefined' && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+  initLineWaves(finalWavesEl, {
+    speed: 0.3,
+    innerLineCount: 24,
+    outerLineCount: 28,
+    warpIntensity: 1.0,
+    rotation: -45,
+    edgeFadeWidth: 0.0,
+    colorCycleSpeed: 0.6,
+    brightness: 0.22,
+    color1: '#FF8A00',
+    color2: '#FF5B00',
+    color3: '#B34400',
+    enableMouseInteraction: true,
+    mouseInfluence: 1.6
+  });
+}
+
 mm.add({
   isDesktop: "(min-width: 861px)",
   isMobile: "(max-width: 860px)",
@@ -1483,8 +1758,8 @@ mm.add({
 
   /* ---------- rotating platform name (synced with the "owner" in the subtitle) ---------- */
   (function cyclePlatforms(){
-    const platforms = ["Instagram", "Doctoralia", "Google Maps", "Facebook", "WhatsApp", "TikTok"];
-    const owners    = ["Meta", "Doctoralia", "Google", "Meta", "Meta", "ByteDance"];
+    const platforms = ["Instagram", "Facebook", "Google Maps", "WhatsApp", "TikTok"];
+    const owners    = ["Meta", "Meta", "Google", "Meta", "ByteDance"];
     const wordEl = document.getElementById("platformWord");
     const ownerEl = document.getElementById("ownerWord");
     if(!wordEl || !ownerEl) return;
@@ -1525,8 +1800,9 @@ mm.add({
   /* ---------- pain bento cards reveal ---------- */
   ScrollTrigger.batch(".bento-card", {
     start:"top 88%",
-    onEnter:(els) => gsap.to(els, { autoAlpha:1, y:0, stagger:0.1, duration: reduceMotion?0:.7, ease:"power2.out" }),
-    onLeaveBack:(els) => gsap.set(els, { autoAlpha:0, y:24 })
+    onEnter:(els) => gsap.to(els, { opacity:1, y:0, stagger:0.1, duration: reduceMotion?0:.7, ease:"power2.out", overwrite:"auto" }),
+    onEnterBack:(els) => gsap.to(els, { opacity:1, y:0, stagger:0.1, duration: reduceMotion?0:.7, ease:"power2.out", overwrite:"auto" }),
+    onLeaveBack:(els) => gsap.to(els, { opacity:0, y:24, stagger:0.1, duration: reduceMotion?0:.5, ease:"power2.in", overwrite:"auto" })
   });
   if(!reduceMotion){
     document.querySelectorAll(".bento-card").forEach((card) => {
@@ -1928,20 +2204,53 @@ if(window.matchMedia("(pointer:fine) and (min-width: 821px)").matches){
   });
 }
 
-/* ---------- final form (client-side only — needs a real endpoint, see note) ---------- */
+/* ---------- final form -> n8n webhook ---------- */
 (function(){
+  const N8N_WEBHOOK_URL = "TODO: pega aqui tu URL de webhook n8n";
+
   const form = document.getElementById("finalForm");
   const note = document.getElementById("formNote");
+  const btn = document.getElementById("finalCta");
   if(!form) return;
-  form.addEventListener("submit", (e) => {
+
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
     if(!form.checkValidity()){
       form.reportValidity();
       return;
     }
-    note.textContent = "¡Gracias! Te contactamos en menos de 24h.";
-    note.classList.add("ok");
-    form.reset();
+
+    const payload = {
+      nombre: form.nombre.value.trim(),
+      email: form.email.value.trim(),
+      telefono: form.telefono.value.trim(),
+      negocio: form.negocio.value.trim(),
+      origen: "73webs.com",
+      pagina: window.location.href,
+      enviado_en: new Date().toISOString()
+    };
+
+    btn.disabled = true;
+    note.classList.remove("ok", "error");
+    note.textContent = "Enviando...";
+
+    try {
+      const res = await fetch(N8N_WEBHOOK_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+      if(!res.ok) throw new Error("respuesta no OK: " + res.status);
+
+      note.textContent = "¡Gracias! Te contactamos en menos de 24h.";
+      note.classList.add("ok");
+      form.reset();
+    } catch(err) {
+      note.textContent = "No se pudo enviar. Intenta de nuevo o escríbenos directo.";
+      note.classList.add("error");
+    } finally {
+      btn.disabled = false;
+    }
   });
 })();
 
