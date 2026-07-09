@@ -181,6 +181,15 @@
     display:flex; align-items:center; justify-content:center;
     font-family:var(--mono); font-size:9px; color:#0D0F14; font-weight:700;
   }
+  .logo-img{
+    height:22px; width:auto;
+    display:block;
+    margin-right:-8px;
+  }
+  .hp-field{
+    position:absolute; left:-9999px; top:auto;
+    width:1px; height:1px; overflow:hidden;
+  }
   .pill-list{
     display:flex; align-items:center; gap:2px;
     list-style:none; margin:0; padding:0;
@@ -940,7 +949,7 @@
 
 <div class="nav-shell">
   <nav class="nav pill-nav">
-    <div class="logo"><span class="logo-mark">73</span>webs</div>
+    <div class="logo"><img class="logo-img" src="img/73-logo.svg" alt="73webs" width="34" height="22" />webs</div>
     <ul class="pill-list">
       <li><a class="pill" href="#pain">
         <span class="hover-circle" aria-hidden="true"></span>
@@ -1196,6 +1205,10 @@
           <label for="fBusiness">Tu negocio</label>
           <input type="text" id="fBusiness" name="negocio" placeholder="Nombre del negocio">
         </div>
+      </div>
+      <div class="hp-field" aria-hidden="true">
+        <label for="fWeb">Deja este campo vacío</label>
+        <input type="text" id="fWeb" name="empresa_web" tabindex="-1" autocomplete="off">
       </div>
       <button type="submit" class="btn btn-gold final-cta" id="finalCta">Quiero mi web y mi sistema propio</button>
       <p class="form-note" id="formNote" aria-live="polite"></p>
@@ -2284,8 +2297,28 @@ if(window.matchMedia("(pointer:fine) and (min-width: 821px)").matches){
   const btn = document.getElementById("finalCta");
   if(!form) return;
 
+  const formLoadedAt = Date.now();
+
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
+
+    // Anti-bot: honeypot. Humano nunca ve/rellena este campo.
+    if(form.empresa_web && form.empresa_web.value.trim() !== ""){
+      note.textContent = "¡Gracias! Te contactamos en menos de 24h.";
+      note.classList.remove("error");
+      note.classList.add("ok");
+      form.reset();
+      return;
+    }
+
+    // Anti-bot: time-trap. Envío en <3s = automatizado.
+    if(Date.now() - formLoadedAt < 3000){
+      note.classList.remove("ok");
+      note.classList.add("error");
+      note.textContent = "Espera un momento antes de enviar.";
+      return;
+    }
+
     if(!form.checkValidity()){
       form.reportValidity();
       return;
