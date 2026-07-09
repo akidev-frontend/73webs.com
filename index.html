@@ -262,7 +262,7 @@
   }
 
   .hero h1{
-    font-size:clamp(2.4rem, 5.6vw, 4.6rem);
+    font-size:clamp(1.95rem, 6.4vw, 4.6rem);
     line-height:1.06;
     max-width:16ch;
     font-variation-settings:'wght' 800;
@@ -908,6 +908,27 @@
   #cc-main .cm__title, #cc-main .pm__title{ font-family:var(--display); color:#FFFFFF; }
   #cc-main .cm__desc, #cc-main .pm__section-desc, #cc-main .cm__texts p, #cc-main .pm__texts p{ color:#FFFFFF; }
   #cc-main a{ color:var(--gold); }
+
+  /* ---------- small phones ---------- */
+  @media (max-width:560px){
+    .wrap{ padding:0 22px; }
+  }
+  @media (max-width:480px){
+    .wrap{ padding:0 18px; }
+    .hero{ padding:120px 0 80px; }
+    .hero .eyebrow{ font-size:10.5px; }
+    .hero-sub{ font-size:15.5px; margin-top:22px; }
+    .hero-cta{ margin-top:30px; width:100%; }
+    .hero-cta .btn{ width:100%; justify-content:center; white-space:normal; text-align:center; }
+    .platform-box{ min-width:0; }
+    .owner-box{ width:auto; min-width:0; }
+    .btn{ padding:15px 22px; }
+    .final-direct-links{ flex-direction:column; align-items:stretch; }
+    .final-direct-btn{ width:100%; justify-content:center; }
+  }
+  @media (max-width:380px){
+    .hero h1{ font-size:1.75rem; }
+  }
 
   @media (prefers-reduced-motion: reduce){
     *{ animation:none !important; transition:none !important; }
@@ -2090,6 +2111,14 @@ mm.add({
 
   return () => { /* matchMedia cleanup handled by gsap */ };
 });
+
+/* ---------- keep ScrollTrigger positions correct after fonts / images / async CDN
+   scripts settle the layout — without this, triggers computed at first paint get
+   stale and reveals fire late or stay stuck invisible ---------- */
+window.addEventListener("load", () => ScrollTrigger.refresh());
+if(document.fonts && document.fonts.ready){
+  document.fonts.ready.then(() => ScrollTrigger.refresh());
+}
 
 /* ---------- VariableProximity (vanilla port of react-bits VariableProximity, no 'motion' dependency) ---------- */
 /* pointer:fine alone isn't enough — some narrow/hybrid devices report a fine pointer too, so gate on width as well */
