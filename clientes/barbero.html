@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[NOMBRE_NEGOCIO] — Barbería en [CIUDAD]</title>
+<meta name="description" content="Barbería en [CIUDAD]. Corte y arreglo de barba sin colas y sin sorpresas. Reserva tu hora, tu barbero fijo y sal como quieres. Cita online por WhatsApp.">
+<link rel="canonical" href="https://73webs.com/clientes/barbero.html">
+
+<meta property="og:type" content="business.business">
+<meta property="og:title" content="[NOMBRE_NEGOCIO] — Barbería en [CIUDAD]">
+<meta property="og:description" content="Corte y barba sin colas y sin sorpresas. Reserva tu hora y tu barbero fijo.">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index,follow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Asap:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "name": "[NOMBRE_NEGOCIO]",
+  "image": "https://73webs.com/img/barbero.jpg",
+  "description": "Barbería en [CIUDAD]. Corte y arreglo de barba con cita previa.",
+  "telephone": "[TELEFONO]",
+  "email": "[EMAIL]",
+  "url": "https://73webs.com/clientes/barbero.html",
+  "priceRange": "€€",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "[DIRECCION]",
+    "addressLocality": "[CIUDAD]",
+    "addressCountry": "ES"
+  },
+  "openingHours": "[HORARIO]"
+}
+</script>
+
+<style>
+  :root{
+    --bg:        #141210;
+    --bg-soft:   #1C1916;
+    --surface:   #221E1A;
+    --ink:       #F4EFE7;
+    --ink-dim:   #CBC1B2;
+    --muted:     #948A7B;
+    --line:      rgba(244,239,231,0.10);
+    --line-strong: rgba(244,239,231,0.20);
+    --accent:    #C9A24B;
+    --accent-bright: #E0B85C;
+    --accent-dim: #8E6F2E;
+    --accent-wash: rgba(201,162,75,0.14);
+
+    --display: 'Plus Jakarta Sans', sans-serif;
+    --sans: 'Asap', sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+    --container: 1080px;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ background:var(--bg); scroll-behavior:smooth; }
+  body{ background:var(--bg); color:var(--ink); font-family:var(--sans); font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+  ::selection{ background:var(--accent); color:#141210; }
+  img,svg{ display:block; max-width:100%; }
+  a{ color:inherit; text-decoration:none; }
+  ul{ list-style:none; }
+  button{ font-family:inherit; cursor:pointer; border:none; background:none; color:inherit; }
+  .wrap{ max-width:var(--container); margin:0 auto; padding:0 24px; }
+  h1,h2,h3{ font-family:var(--display); font-weight:800; letter-spacing:-0.02em; line-height:1.08; }
+  section{ padding:128px 0; }
+  .eyebrow{ font-family:var(--mono); font-size:11.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--accent-bright); display:flex; align-items:center; gap:10px; margin-bottom:20px; }
+  .eyebrow::before{ content:''; width:24px; height:1px; background:var(--accent); }
+  .btn{ display:inline-flex; align-items:center; gap:10px; font-weight:700; font-size:15px; padding:15px 26px; border-radius:2px; transition:.2s; text-transform:uppercase; letter-spacing:.04em; }
+  .btn-primary{ background:var(--accent); color:#141210; }
+  .btn-primary:hover{ background:var(--accent-bright); transform:translateY(-2px); }
+  .btn-ghost{ border:1px solid var(--line-strong); color:var(--ink); }
+  .btn-ghost:hover{ border-color:var(--accent); color:var(--accent-bright); }
+
+  header.nav{ position:sticky; top:0; z-index:50; background:rgba(20,18,16,0.84); backdrop-filter:blur(12px); border-bottom:1px solid var(--line); }
+  .nav-inner{ display:flex; align-items:center; justify-content:space-between; height:64px; }
+  .logo{ font-family:var(--display); font-weight:800; font-size:19px; letter-spacing:.02em; text-transform:uppercase; }
+  .logo span{ color:var(--accent-bright); }
+  .nav-cta{ font-size:13px; font-weight:700; }
+
+  .hero{ padding:150px 0 120px; position:relative; }
+  .hero::after{ content:''; position:absolute; top:-15%; right:-8%; width:520px; height:520px; background:radial-gradient(circle,var(--accent-wash),transparent 70%); z-index:-1; }
+  .hero h1{ font-size:clamp(34px,6vw,60px); max-width:15ch; margin-bottom:24px; }
+  .hero h1 em{ font-style:normal; color:var(--accent-bright); }
+  .hero p.lead{ font-size:clamp(17px,2.4vw,20px); color:var(--ink-dim); max-width:52ch; margin-bottom:36px; }
+  .hero-actions{ display:flex; gap:14px; flex-wrap:wrap; }
+
+  .pain{ background:var(--bg-soft); }
+  .pain-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:28px; margin-top:64px; }
+  .pain-card{ background:var(--surface); border:1px solid var(--line); border-radius:4px; padding:28px; }
+  .pain-card h3{ font-size:18px; margin-bottom:10px; color:var(--ink); }
+  .pain-card p{ color:var(--muted); font-size:15px; }
+  .pain-card .x{ color:var(--accent-bright); font-family:var(--mono); font-size:13px; margin-bottom:14px; display:block; }
+
+  .lead-head{ max-width:22ch; font-size:clamp(26px,4vw,40px); margin-bottom:16px; }
+  .sub{ color:var(--ink-dim); max-width:56ch; font-size:17px; }
+
+  .sol-list{ display:grid; gap:20px; margin-top:60px; max-width:720px; }
+  .sol-item{ display:flex; gap:18px; align-items:flex-start; padding:22px; border:1px solid var(--line); border-radius:4px; background:var(--surface); }
+  .sol-item .num{ font-family:var(--mono); color:var(--accent-bright); font-size:14px; padding-top:2px; }
+  .sol-item h3{ font-size:17px; margin-bottom:6px; }
+  .sol-item p{ color:var(--muted); font-size:15px; }
+
+  .svc-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:4px; overflow:hidden; margin-top:60px; }
+  .svc{ background:var(--bg); padding:32px 26px; }
+  .svc h3{ font-size:17px; margin-bottom:8px; }
+  .svc p{ color:var(--muted); font-size:14.5px; }
+  .svc .price{ font-family:var(--mono); color:var(--accent-bright); font-size:15px; margin-top:14px; display:block; }
+
+  .trust{ background:var(--bg-soft); text-align:center; }
+  .trust-quote{ font-family:var(--display); font-weight:700; font-size:clamp(22px,3.4vw,32px); max-width:20ch; margin:0 auto 24px; line-height:1.25; }
+  .trust-quote em{ font-style:normal; color:var(--accent-bright); }
+  .stars{ color:var(--accent-bright); letter-spacing:3px; margin-bottom:10px; }
+  .trust-name{ color:var(--muted); font-size:14px; font-family:var(--mono); }
+
+  .final{ text-align:center; position:relative; }
+  .final::after{ content:''; position:absolute; inset:0; background:radial-gradient(circle at 50% 0,var(--accent-wash),transparent 60%); z-index:-1; }
+  .final h2{ font-size:clamp(30px,5vw,48px); max-width:16ch; margin:0 auto 22px; }
+  .final h2 em{ font-style:normal; color:var(--accent-bright); }
+  .final p{ color:var(--ink-dim); max-width:46ch; margin:0 auto 34px; font-size:18px; }
+
+  footer{ border-top:1px solid var(--line); padding:44px 0; color:var(--muted); font-size:14px; }
+  .foot-inner{ display:flex; flex-wrap:wrap; gap:20px; justify-content:space-between; align-items:center; }
+  .foot-inner a:hover{ color:var(--accent-bright); }
+  .foot-contact{ display:flex; gap:22px; flex-wrap:wrap; }
+  .made{ font-size:12px; color:var(--muted); }
+  .made a{ color:var(--accent-bright); }
+
+  /* lang switch */
+  .nav-right{ display:flex; align-items:center; gap:14px; }
+  .lang-switch{ display:inline-flex; border:1px solid var(--line-strong); border-radius:4px; overflow:hidden; }
+  .lang-switch button{ font-family:var(--mono); font-size:12px; font-weight:600; padding:6px 11px; color:var(--muted); letter-spacing:.04em; transition:.15s; }
+  .lang-switch button:hover{ color:var(--ink); }
+  html[lang="es"] .lang-switch [data-set="es"], html[lang="ca"] .lang-switch [data-set="ca"]{ background:var(--accent); color:var(--bg); }
+  [data-l]{ display:none; }
+  html[lang="es"] [data-l="es"], html[lang="ca"] [data-l="ca"]{ display:revert; }
+
+  /* scroll reveal */
+  @media (prefers-reduced-motion:no-preference){
+    [data-reveal]{ opacity:0; transform:translateY(28px); transition:opacity .7s cubic-bezier(.16,.84,.44,1), transform .7s cubic-bezier(.16,.84,.44,1); will-change:opacity,transform; }
+    [data-reveal].is-visible{ opacity:1; transform:none; }
+  }</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <div class="logo">[NOMBRE<span>_</span>NEGOCIO]</div>
+    <div class="nav-right">
+      <div class="lang-switch"><button type="button" data-set="es">ES</button><button type="button" data-set="ca">CA</button></div>
+      <a class="nav-cta btn btn-primary" href="[WHATSAPP]"><span data-l="es">Reservar hora</span><span data-l="ca">Reserva hora</span></a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow"><span data-l="es">Barbería · [CIUDAD]</span><span data-l="ca">Barberia · [CIUDAD]</span></div>
+      <h1><span data-l="es">Tu hora reservada. <em>Tu barbero fijo. Cero colas.</em></span><span data-l="ca">La teva hora reservada. <em>El teu barber fix. Zero cues.</em></span></h1>
+      <p class="lead"><span data-l="es">Reserva online, llega a tu hora y siéntate. Sin esperas de pie, sin explicar tu corte cada vez. Aquí ya saben cómo te gusta.</span><span data-l="ca">Reserva online, arriba a la teva hora i seu. Sense esperes dempeus, sense explicar el teu tall cada vegada. Aquí ja saben com t'agrada.</span></p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="[WHATSAPP]"><span data-l="es">Reserva tu hora</span><span data-l="ca">Reserva la teva hora</span></a>
+        <a class="btn btn-ghost" href="#servicios"><span data-l="es">Ver servicios</span><span data-l="ca">Mira els serveis</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="pain">
+    <div class="wrap">
+      <div class="eyebrow"><span data-l="es">Lo que odias del barbero</span><span data-l="ca">El que odies del barber</span></div>
+      <h2 class="lead-head"><span data-l="es">Cortarte el pelo no debería costarte media tarde.</span><span data-l="ca">Tallar-te els cabells no t'hauria de costar mitja tarda.</span></h2>
+      <p class="sub"><span data-l="es">Ya sabes de qué hablo. Aquí lo arreglamos:</span><span data-l="ca">Ja saps de què parlo. Aquí ho arreglem:</span></p>
+      <div class="pain-grid">
+        <div class="pain-card"><span class="x">✕ 01</span><h3><span data-l="es">La cola de siempre</span><span data-l="ca">La cua de sempre</span></h3><p><span data-l="es">Llegas y hay cuatro delante. Con cita previa, tu hora es tuya. Entras y te sientas.</span><span data-l="ca">Arribes i hi ha quatre al davant. Amb cita prèvia, la teva hora és teva. Entres i seus.</span></p></div>
+        <div class="pain-card"><span class="x">✕ 02</span><h3><span data-l="es">"El de la última vez no está"</span><span data-l="ca">"El de l'última vegada no hi és"</span></h3><p><span data-l="es">Reservas con tu barbero. El que ya sabe cómo llevas los lados y el degradado.</span><span data-l="ca">Reserves amb el teu barber. El que ja sap com portes els costats i el degradat.</span></p></div>
+        <div class="pain-card"><span class="x">✕ 03</span><h3><span data-l="es">Sales y no era eso</span><span data-l="ca">Surts i no era això</span></h3><p><span data-l="es">Antes de la máquina hablamos el corte. Foto si quieres. Sales como querías entrar.</span><span data-l="ca">Abans de la màquina parlem el tall. Foto si vols. Surts com volies entrar.</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicios">
+    <div class="wrap">
+      <div class="eyebrow"><span data-l="es">Cómo funciona</span><span data-l="ca">Com funciona</span></div>
+      <h2 class="lead-head"><span data-l="es">Rápido de reservar. Bien hecho al cortar.</span><span data-l="ca">Ràpid de reservar. Ben fet en tallar.</span></h2>
+      <div class="sol-list">
+        <div class="sol-item"><span class="num">01</span><div><h3><span data-l="es">Reserva en 30 segundos</span><span data-l="ca">Reserva en 30 segons</span></h3><p><span data-l="es">Eliges día, hora y barbero desde el móvil. Sin llamar, sin esperar respuesta.</span><span data-l="ca">Tries dia, hora i barber des del mòbil. Sense trucar, sense esperar resposta.</span></p></div></div>
+        <div class="sol-item"><span class="num">02</span><div><h3><span data-l="es">Llegas y te sientas</span><span data-l="ca">Arribes i seus</span></h3><p><span data-l="es">Tu hora está guardada. Nada de esperar de pie mirando el reloj.</span><span data-l="ca">La teva hora està guardada. Res d'esperar dempeus mirant el rellotge.</span></p></div></div>
+        <div class="sol-item"><span class="num">03</span><div><h3><span data-l="es">Hablamos el corte</span><span data-l="ca">Parlem el tall</span></h3><p><span data-l="es">Un minuto para dejar claro qué quieres. Luego, a lo nuestro.</span><span data-l="ca">Un minut per deixar clar què vols. Després, a la nostra.</span></p></div></div>
+        <div class="sol-item"><span class="num">04</span><div><h3><span data-l="es">Sales impecable</span><span data-l="ca">Surts impecable</span></h3><p><span data-l="es">Corte, barba y detalle. Y ya con la próxima reservada si quieres.</span><span data-l="ca">Tall, barba i detall. I ja amb la propera reservada si vols.</span></p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pain">
+    <div class="wrap">
+      <div class="eyebrow"><span data-l="es">Servicios</span><span data-l="ca">Serveis</span></div>
+      <h2 class="lead-head"><span data-l="es">La carta</span><span data-l="ca">La carta</span></h2>
+      <div class="svc-grid">
+        <div class="svc"><h3><span data-l="es">Corte</span><span data-l="ca">Tall</span></h3><p><span data-l="es">Degradado, tijera o máquina. A tu estilo.</span><span data-l="ca">Degradat, tisora o màquina. Al teu estil.</span></p><span class="price">[PRECIO]</span></div>
+        <div class="svc"><h3><span data-l="es">Corte + Barba</span><span data-l="ca">Tall + Barba</span></h3><p><span data-l="es">El combo completo. Sales nuevo.</span><span data-l="ca">El combo complet. Surts nou.</span></p><span class="price">[PRECIO]</span></div>
+        <div class="svc"><h3><span data-l="es">Arreglo de barba</span><span data-l="ca">Arranjament de barba</span></h3><p><span data-l="es">Perfilado, toalla caliente y aceite.</span><span data-l="ca">Perfilat, tovallola calenta i oli.</span></p><span class="price">[PRECIO]</span></div>
+        <div class="svc"><h3><span data-l="es">Corte niño</span><span data-l="ca">Tall nen</span></h3><p><span data-l="es">Paciencia y buen corte para los peques.</span><span data-l="ca">Paciència i bon tall per als petits.</span></p><span class="price">[PRECIO]</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust">
+    <div class="wrap">
+      <div class="stars">★★★★★</div>
+      <p class="trust-quote"><span data-l="es">"Reservo desde el móvil, llego y en cero espera estoy en la silla. <em>Y siempre me atiende el mismo.</em> No vuelvo a otra."</span><span data-l="ca">"Reservo des del mòbil, arribo i sense esperar estic a la cadira. <em>I sempre m'atén el mateix.</em> No torno a cap altra."</span></p>
+      <p class="trust-name">— [NOMBRE_CLIENTE], <span data-l="es">reseña Google</span><span data-l="ca">ressenya Google</span></p>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap">
+      <div class="eyebrow" style="justify-content:center"><span data-l="es">Tu próxima cita</span><span data-l="ca">La teva propera cita</span></div>
+      <h2><span data-l="es">Reserva ahora. <em>Sin colas, sin sorpresas.</em></span><span data-l="ca">Reserva ara. <em>Sense cues, sense sorpreses.</em></span></h2>
+      <p><span data-l="es">Elige día y hora en un momento. Tu barbero te espera.</span><span data-l="ca">Tria dia i hora en un moment. El teu barber t'espera.</span></p>
+      <a class="btn btn-primary" href="[WHATSAPP]"><span data-l="es">Reserva ahora</span><span data-l="ca">Reserva ara</span></a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <div>
+      <div class="logo" style="margin-bottom:8px">[NOMBRE_NEGOCIO]</div>
+      <div class="foot-contact">
+        <a href="tel:[TELEFONO]">[TELEFONO]</a>
+        <a href="mailto:[EMAIL]">[EMAIL]</a>
+        <span>[DIRECCION], [CIUDAD]</span>
+      </div>
+    </div>
+    <div class="made"><span data-l="es">Web hecha por</span><span data-l="ca">Web feta per</span> <a href="https://73webs.com">73webs</a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var s=localStorage.getItem('lang');
+  if(s==='ca'||s==='es') document.documentElement.lang=s;
+  document.addEventListener('click',function(e){
+    var b=e.target.closest&&e.target.closest('[data-set]'); if(!b) return;
+    var l=b.getAttribute('data-set'); document.documentElement.lang=l;
+    try{localStorage.setItem('lang',l);}catch(_){}
+  });
+})();
+</script>
+<script>
+(function(){
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var sel = '.hero .eyebrow, .hero h1, .hero p.lead, .hero-actions, section > .wrap > .eyebrow, .lead-head, .sub, .pain-card, .sol-item, .svc, .trust-quote, .stars, .trust-name, .final h2, .final p';
+  var els = Array.prototype.slice.call(document.querySelectorAll(sel));
+  els.forEach(function(el){ el.setAttribute('data-reveal',''); });
+  document.querySelectorAll('.pain-grid, .sol-list, .svc-grid').forEach(function(grid){
+    Array.prototype.slice.call(grid.children).forEach(function(child,i){
+      child.style.transitionDelay = (i*90)+'ms';
+    });
+  });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('is-visible'); io.unobserve(e.target); }
+    });
+  },{ threshold:0.12, rootMargin:'0px 0px -8% 0px' });
+  els.forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>

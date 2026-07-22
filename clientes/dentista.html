@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[NOMBRE_NEGOCIO] — Clínica dental en [CIUDAD]</title>
+<meta name="description" content="Clínica dental en [CIUDAD] sin miedo y sin sorpresas en la factura. Presupuesto cerrado por escrito, trato cercano y urgencias el mismo día. Pide tu primera visita.">
+<link rel="canonical" href="https://73webs.com/clientes/dentista.html">
+
+<meta property="og:type" content="business.business">
+<meta property="og:title" content="[NOMBRE_NEGOCIO] — Clínica dental en [CIUDAD]">
+<meta property="og:description" content="Sin miedo y sin sorpresas en la factura. Presupuesto cerrado y urgencias el mismo día.">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index,follow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Asap:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "[NOMBRE_NEGOCIO]",
+  "image": "https://73webs.com/img/dentista.jpg",
+  "description": "Clínica dental en [CIUDAD] con presupuesto cerrado y trato cercano.",
+  "telephone": "[TELEFONO]",
+  "email": "[EMAIL]",
+  "url": "https://73webs.com/clientes/dentista.html",
+  "priceRange": "€€",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "[DIRECCION]",
+    "addressLocality": "[CIUDAD]",
+    "addressCountry": "ES"
+  },
+  "openingHours": "[HORARIO]"
+}
+</script>
+
+<style>
+  :root{
+    --bg:        #FBFDFF;
+    --bg-soft:   #EFF6FB;
+    --surface:   #FFFFFF;
+    --ink:       #0E1E2B;
+    --ink-dim:   #3C5262;
+    --muted:     #6B8296;
+    --line:      rgba(14,30,43,0.10);
+    --line-strong: rgba(14,30,43,0.18);
+    --accent:    #0A84C4;
+    --accent-bright: #14B8A6;
+    --accent-dim: #0A5F8E;
+    --accent-wash: rgba(20,184,166,0.12);
+
+    --display: 'Plus Jakarta Sans', sans-serif;
+    --sans: 'Asap', sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+    --container: 1080px;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ background:var(--bg); scroll-behavior:smooth; }
+  body{ background:var(--bg); color:var(--ink); font-family:var(--sans); font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+  ::selection{ background:var(--accent-bright); color:#fff; }
+  img,svg{ display:block; max-width:100%; }
+  a{ color:inherit; text-decoration:none; }
+  ul{ list-style:none; }
+  button{ font-family:inherit; cursor:pointer; border:none; background:none; color:inherit; }
+  .wrap{ max-width:var(--container); margin:0 auto; padding:0 24px; }
+  h1,h2,h3{ font-family:var(--display); font-weight:800; letter-spacing:-0.02em; line-height:1.08; }
+  section{ padding:128px 0; }
+  .eyebrow{ font-family:var(--mono); font-size:11.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--accent); display:flex; align-items:center; gap:10px; margin-bottom:20px; }
+  .eyebrow::before{ content:''; width:24px; height:1px; background:var(--accent-bright); }
+  .btn{ display:inline-flex; align-items:center; gap:10px; font-weight:700; font-size:15px; padding:15px 26px; border-radius:40px; transition:.2s; }
+  .btn-primary{ background:var(--accent); color:#fff; box-shadow:0 8px 24px rgba(10,132,196,0.28); }
+  .btn-primary:hover{ background:var(--accent-dim); transform:translateY(-2px); }
+  .btn-ghost{ border:1px solid var(--line-strong); color:var(--ink); }
+  .btn-ghost:hover{ border-color:var(--accent-bright); color:var(--accent); }
+
+  header.nav{ position:sticky; top:0; z-index:50; background:rgba(251,253,255,0.85); backdrop-filter:blur(12px); border-bottom:1px solid var(--line); }
+  .nav-inner{ display:flex; align-items:center; justify-content:space-between; height:64px; }
+  .logo{ font-family:var(--display); font-weight:800; font-size:19px; letter-spacing:-.02em; }
+  .logo span{ color:var(--accent-bright); }
+  .nav-cta{ font-size:14px; font-weight:600; }
+
+  .hero{ padding:150px 0 120px; position:relative; }
+  .hero::after{ content:''; position:absolute; top:-15%; right:-8%; width:520px; height:520px; background:radial-gradient(circle,var(--accent-wash),transparent 70%); z-index:-1; }
+  .hero h1{ font-size:clamp(34px,6vw,60px); max-width:16ch; margin-bottom:24px; }
+  .hero h1 em{ font-style:normal; color:var(--accent); }
+  .hero p.lead{ font-size:clamp(17px,2.4vw,20px); color:var(--ink-dim); max-width:52ch; margin-bottom:36px; }
+  .hero-actions{ display:flex; gap:14px; flex-wrap:wrap; }
+
+  .pain{ background:var(--bg-soft); }
+  .pain-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:28px; margin-top:64px; }
+  .pain-card{ background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:28px; box-shadow:0 4px 20px rgba(14,30,43,0.04); }
+  .pain-card h3{ font-size:18px; margin-bottom:10px; color:var(--ink); }
+  .pain-card p{ color:var(--muted); font-size:15px; }
+  .pain-card .x{ color:var(--accent); font-family:var(--mono); font-size:13px; margin-bottom:14px; display:block; }
+
+  .lead-head{ max-width:22ch; font-size:clamp(26px,4vw,40px); margin-bottom:16px; }
+  .sub{ color:var(--ink-dim); max-width:56ch; font-size:17px; }
+
+  .sol-list{ display:grid; gap:20px; margin-top:60px; max-width:720px; }
+  .sol-item{ display:flex; gap:18px; align-items:flex-start; padding:22px; border:1px solid var(--line); border-radius:14px; background:var(--surface); }
+  .sol-item .num{ font-family:var(--mono); color:var(--accent-bright); font-size:14px; padding-top:2px; }
+  .sol-item h3{ font-size:17px; margin-bottom:6px; }
+  .sol-item p{ color:var(--muted); font-size:15px; }
+
+  .svc-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:14px; overflow:hidden; margin-top:60px; }
+  .svc{ background:var(--surface); padding:32px 26px; }
+  .svc h3{ font-size:17px; margin-bottom:8px; }
+  .svc p{ color:var(--muted); font-size:14.5px; }
+  .svc .price{ font-family:var(--mono); color:var(--accent); font-size:14px; margin-top:14px; display:block; }
+
+  .trust{ background:var(--bg-soft); text-align:center; }
+  .trust-quote{ font-family:var(--display); font-weight:700; font-size:clamp(22px,3.4vw,32px); max-width:20ch; margin:0 auto 24px; line-height:1.25; }
+  .trust-quote em{ font-style:normal; color:var(--accent); }
+  .stars{ color:var(--accent-bright); letter-spacing:3px; margin-bottom:10px; }
+  .trust-name{ color:var(--muted); font-size:14px; font-family:var(--mono); }
+
+  .final{ text-align:center; position:relative; }
+  .final::after{ content:''; position:absolute; inset:0; background:radial-gradient(circle at 50% 0,var(--accent-wash),transparent 60%); z-index:-1; }
+  .final h2{ font-size:clamp(30px,5vw,48px); max-width:18ch; margin:0 auto 22px; }
+  .final h2 em{ font-style:normal; color:var(--accent); }
+  .final p{ color:var(--ink-dim); max-width:46ch; margin:0 auto 34px; font-size:18px; }
+
+  footer{ border-top:1px solid var(--line); padding:44px 0; color:var(--muted); font-size:14px; }
+  .foot-inner{ display:flex; flex-wrap:wrap; gap:20px; justify-content:space-between; align-items:center; }
+  .foot-inner a:hover{ color:var(--accent); }
+  .foot-contact{ display:flex; gap:22px; flex-wrap:wrap; }
+  .made{ font-size:12px; color:var(--muted); }
+  .made a{ color:var(--accent); }
+
+  /* lang switch */
+  .nav-right{ display:flex; align-items:center; gap:14px; }
+  .lang-switch{ display:inline-flex; border:1px solid var(--line-strong); border-radius:40px; overflow:hidden; }
+  .lang-switch button{ font-family:var(--mono); font-size:12px; font-weight:600; padding:6px 11px; color:var(--muted); letter-spacing:.04em; transition:.15s; }
+  .lang-switch button:hover{ color:var(--ink); }
+  html[lang="es"] .lang-switch [data-set="es"], html[lang="ca"] .lang-switch [data-set="ca"]{ background:var(--accent); color:#fff; }
+  [data-l]{ display:none; }
+  html[lang="es"] [data-l="es"], html[lang="ca"] [data-l="ca"]{ display:revert; }
+
+  /* scroll reveal */
+  @media (prefers-reduced-motion:no-preference){
+    [data-reveal]{ opacity:0; transform:translateY(28px); transition:opacity .7s cubic-bezier(.16,.84,.44,1), transform .7s cubic-bezier(.16,.84,.44,1); will-change:opacity,transform; }
+    [data-reveal].is-visible{ opacity:1; transform:none; }
+  }</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <div class="logo">[NOMBRE<span>_</span>NEGOCIO]</div>
+    <div class="nav-right">
+      <div class="lang-switch"><button type="button" data-set="es">ES</button><button type="button" data-set="ca">CA</button></div>
+      <a class="nav-cta btn btn-primary" href="[WHATSAPP]"><span data-l="es">Pedir cita</span><span data-l="ca">Demana cita</span></a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow"><span data-l="es">Clínica dental · [CIUDAD]</span><span data-l="ca">Clínica dental · [CIUDAD]</span></div>
+      <h1><span data-l="es">Al dentista <em>sin miedo y sin sorpresas en la factura.</em></span><span data-l="ca">Al dentista <em>sense por i sense sorpreses a la factura.</em></span></h1>
+      <p class="lead"><span data-l="es">Te explicamos qué necesitas y qué no, con presupuesto cerrado por escrito antes de empezar. Sin sobretratamientos, sin letra pequeña. Solo tu boca sana.</span><span data-l="ca">T'expliquem què necessites i què no, amb pressupost tancat per escrit abans de començar. Sense sobretractaments, sense lletra petita. Només la teva boca sana.</span></p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="[WHATSAPP]"><span data-l="es">Pide tu primera visita</span><span data-l="ca">Demana la teva primera visita</span></a>
+        <a class="btn btn-ghost" href="#tratamientos"><span data-l="es">Ver tratamientos</span><span data-l="ca">Mira els tractaments</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="pain">
+    <div class="wrap">
+      <div class="eyebrow"><span data-l="es">Por qué lo dejas para después</span><span data-l="ca">Per què ho deixes per a després</span></div>
+      <h2 class="lead-head"><span data-l="es">El problema no es tu boca. Es lo que te da miedo del dentista.</span><span data-l="ca">El problema no és la teva boca. És el que et fa por del dentista.</span></h2>
+      <p class="sub"><span data-l="es">Lo entendemos. Por eso montamos la clínica al revés de como funcionan las demás:</span><span data-l="ca">Ho entenem. Per això vam muntar la clínica al revés de com funcionen les altres:</span></p>
+      <div class="pain-grid">
+        <div class="pain-card"><span class="x">✕ 01</span><h3><span data-l="es">"Me va a doler"</span><span data-l="ca">"Em farà mal"</span></h3><p><span data-l="es">Anestesia bien puesta, ritmo tranquilo y te avisamos de cada paso. El miedo casi siempre es a lo desconocido.</span><span data-l="ca">Anestèsia ben posada, ritme tranquil i t'avisem de cada pas. La por gairebé sempre és al desconegut.</span></p></div>
+        <div class="pain-card"><span class="x">✕ 02</span><h3><span data-l="es">"Me van a clavar"</span><span data-l="ca">"M'enganyaran amb el preu"</span></h3><p><span data-l="es">Presupuesto cerrado por escrito antes de tocarte. Si algo cambia, se habla antes, no en la factura.</span><span data-l="ca">Pressupost tancat per escrit abans de tocar-te. Si alguna cosa canvia, es parla abans, no a la factura.</span></p></div>
+        <div class="pain-card"><span class="x">✕ 03</span><h3><span data-l="es">"Me van a hacer de más"</span><span data-l="ca">"Em faran de més"</span></h3><p><span data-l="es">Te decimos lo que necesitas de verdad. Si puede esperar, te lo decimos. Preferimos que vuelvas a que no vuelvas.</span><span data-l="ca">Et diem el que necessites de veritat. Si pot esperar, t'ho diem. Preferim que tornis que no pas que no tornis.</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tratamientos">
+    <div class="wrap">
+      <div class="eyebrow"><span data-l="es">Cómo trabajamos</span><span data-l="ca">Com treballem</span></div>
+      <h2 class="lead-head"><span data-l="es">Claro desde la primera visita.</span><span data-l="ca">Clar des de la primera visita.</span></h2>
+      <p class="sub"><span data-l="es">Sin tecnicismos que no entiendes. Sin decisiones a la carrera.</span><span data-l="ca">Sense tecnicismes que no entens. Sense decisions a corre-cuita.</span></p>
+      <div class="sol-list">
+        <div class="sol-item"><span class="num">01</span><div><h3><span data-l="es">Revisión y diagnóstico</span><span data-l="ca">Revisió i diagnòstic</span></h3><p><span data-l="es">Vemos tu boca con calma y te explicamos qué hay, en tu idioma, con imágenes.</span><span data-l="ca">Mirem la teva boca amb calma i t'expliquem què hi ha, en el teu idioma, amb imatges.</span></p></div></div>
+        <div class="sol-item"><span class="num">02</span><div><h3><span data-l="es">Plan y presupuesto por escrito</span><span data-l="ca">Pla i pressupost per escrit</span></h3><p><span data-l="es">Sabes qué se hace, en qué orden y cuánto cuesta. Con opciones de financiación si hace falta.</span><span data-l="ca">Saps què es fa, en quin ordre i quant costa. Amb opcions de finançament si cal.</span></p></div></div>
+        <div class="sol-item"><span class="num">03</span><div><h3><span data-l="es">Tratamiento sin prisa</span><span data-l="ca">Tractament sense presses</span></h3><p><span data-l="es">A tu ritmo, con la anestesia y las pausas que necesites.</span><span data-l="ca">Al teu ritme, amb l'anestèsia i les pauses que necessitis.</span></p></div></div>
+        <div class="sol-item"><span class="num">04</span><div><h3><span data-l="es">Seguimiento y urgencias</span><span data-l="ca">Seguiment i urgències</span></h3><p><span data-l="es">Un dolor no espera. Atendemos urgencias el mismo día siempre que podemos.</span><span data-l="ca">Un dolor no espera. Atenem urgències el mateix dia sempre que podem.</span></p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pain">
+    <div class="wrap">
+      <div class="eyebrow"><span data-l="es">Tratamientos</span><span data-l="ca">Tractaments</span></div>
+      <h2 class="lead-head"><span data-l="es">Todo lo que tu boca necesita</span><span data-l="ca">Tot el que la teva boca necessita</span></h2>
+      <div class="svc-grid">
+        <div class="svc"><h3><span data-l="es">Limpieza y prevención</span><span data-l="ca">Neteja i prevenció</span></h3><p><span data-l="es">Higiene profesional para que no vaya a más.</span><span data-l="ca">Higiene professional perquè no vagi a més.</span></p><span class="price"><span data-l="es">Desde [PRECIO]</span><span data-l="ca">Des de [PRECIO]</span></span></div>
+        <div class="svc"><h3><span data-l="es">Empastes y endodoncia</span><span data-l="ca">Empastaments i endodòncia</span></h3><p><span data-l="es">Adiós a la caries y al dolor de muelas.</span><span data-l="ca">Adéu a la càries i al mal de queixal.</span></p><span class="price"><span data-l="es">Desde [PRECIO]</span><span data-l="ca">Des de [PRECIO]</span></span></div>
+        <div class="svc"><h3><span data-l="es">Ortodoncia e Invisalign</span><span data-l="ca">Ortodòncia i Invisalign</span></h3><p><span data-l="es">Alinea tus dientes sin que se note.</span><span data-l="ca">Alinea les teves dents sense que es noti.</span></p><span class="price"><span data-l="es">Desde [PRECIO]</span><span data-l="ca">Des de [PRECIO]</span></span></div>
+        <div class="svc"><h3><span data-l="es">Implantes y estética</span><span data-l="ca">Implants i estètica</span></h3><p><span data-l="es">Recupera tu sonrisa, pieza a pieza.</span><span data-l="ca">Recupera el teu somriure, peça a peça.</span></p><span class="price"><span data-l="es">Presupuesto</span><span data-l="ca">Pressupost</span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust">
+    <div class="wrap">
+      <div class="stars">★★★★★</div>
+      <p class="trust-quote"><span data-l="es">"Llevaba años sin ir por miedo. Me explicaron todo, <em>pagué exactamente lo del presupuesto</em> y no me dolió nada."</span><span data-l="ca">"Feia anys que no hi anava per por. M'ho van explicar tot, <em>vaig pagar exactament el del pressupost</em> i no em va fer gens de mal."</span></p>
+      <p class="trust-name">— [NOMBRE_CLIENTE], <span data-l="es">reseña Google</span><span data-l="ca">ressenya Google</span></p>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap">
+      <div class="eyebrow" style="justify-content:center"><span data-l="es">Empieza hoy</span><span data-l="ca">Comença avui</span></div>
+      <h2><span data-l="es">Tu boca merece una clínica <em>que juegue limpio.</em></span><span data-l="ca">La teva boca es mereix una clínica <em>que jugui net.</em></span></h2>
+      <p><span data-l="es">Primera visita sin compromiso. Te decimos qué necesitas y cuánto cuesta, sin rodeos.</span><span data-l="ca">Primera visita sense compromís. Et diem què necessites i quant costa, sense giragonses.</span></p>
+      <a class="btn btn-primary" href="[WHATSAPP]"><span data-l="es">Reserva ahora</span><span data-l="ca">Reserva ara</span></a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <div>
+      <div class="logo" style="margin-bottom:8px">[NOMBRE_NEGOCIO]</div>
+      <div class="foot-contact">
+        <a href="tel:[TELEFONO]">[TELEFONO]</a>
+        <a href="mailto:[EMAIL]">[EMAIL]</a>
+        <span>[DIRECCION], [CIUDAD]</span>
+      </div>
+    </div>
+    <div class="made"><span data-l="es">Web hecha por</span><span data-l="ca">Web feta per</span> <a href="https://73webs.com">73webs</a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var s=localStorage.getItem('lang');
+  if(s==='ca'||s==='es') document.documentElement.lang=s;
+  document.addEventListener('click',function(e){
+    var b=e.target.closest&&e.target.closest('[data-set]'); if(!b) return;
+    var l=b.getAttribute('data-set'); document.documentElement.lang=l;
+    try{localStorage.setItem('lang',l);}catch(_){}
+  });
+})();
+</script>
+<script>
+(function(){
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var sel = '.hero .eyebrow, .hero h1, .hero p.lead, .hero-actions, section > .wrap > .eyebrow, .lead-head, .sub, .pain-card, .sol-item, .svc, .trust-quote, .stars, .trust-name, .final h2, .final p';
+  var els = Array.prototype.slice.call(document.querySelectorAll(sel));
+  els.forEach(function(el){ el.setAttribute('data-reveal',''); });
+  document.querySelectorAll('.pain-grid, .sol-list, .svc-grid').forEach(function(grid){
+    Array.prototype.slice.call(grid.children).forEach(function(child,i){
+      child.style.transitionDelay = (i*90)+'ms';
+    });
+  });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('is-visible'); io.unobserve(e.target); }
+    });
+  },{ threshold:0.12, rootMargin:'0px 0px -8% 0px' });
+  els.forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>

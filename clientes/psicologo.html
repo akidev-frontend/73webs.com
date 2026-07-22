@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[NOMBRE_NEGOCIO] — Psicólogo/a en [CIUDAD]</title>
+<meta name="description" content="Psicólogo/a en [CIUDAD]. Terapia cercana y confidencial para ansiedad, autoestima, duelo y relaciones. Primera sesión sin juicios. Da el primer paso hoy.">
+<link rel="canonical" href="https://73webs.com/clientes/psicologo.html">
+
+<meta property="og:type" content="business.business">
+<meta property="og:title" content="[NOMBRE_NEGOCIO] — Psicólogo/a en [CIUDAD]">
+<meta property="og:description" content="Terapia cercana y confidencial. Pedir ayuda no es debilidad. Da el primer paso.">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index,follow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Asap:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Psychologist",
+  "name": "[NOMBRE_NEGOCIO]",
+  "image": "https://73webs.com/img/psicologo.jpg",
+  "description": "Psicólogo/a en [CIUDAD]. Terapia para ansiedad, autoestima, duelo y relaciones.",
+  "telephone": "[TELEFONO]",
+  "email": "[EMAIL]",
+  "url": "https://73webs.com/clientes/psicologo.html",
+  "priceRange": "€€",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "[DIRECCION]",
+    "addressLocality": "[CIUDAD]",
+    "addressCountry": "ES"
+  },
+  "openingHours": "[HORARIO]"
+}
+</script>
+
+<style>
+  :root{
+    --bg:        #FAF8F3;
+    --bg-soft:   #F0EDE4;
+    --surface:   #FFFFFF;
+    --ink:       #2C332B;
+    --ink-dim:   #4F5A4B;
+    --muted:     #808A79;
+    --line:      rgba(44,51,43,0.10);
+    --line-strong: rgba(44,51,43,0.16);
+    --accent:    #6B8F71;
+    --accent-bright: #55795B;
+    --accent-dim: #46654B;
+    --accent-wash: rgba(107,143,113,0.14);
+
+    --display: 'Plus Jakarta Sans', sans-serif;
+    --sans: 'Asap', sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+    --container: 1080px;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ background:var(--bg); scroll-behavior:smooth; }
+  body{ background:var(--bg); color:var(--ink); font-family:var(--sans); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+  ::selection{ background:var(--accent); color:#fff; }
+  img,svg{ display:block; max-width:100%; }
+  a{ color:inherit; text-decoration:none; }
+  ul{ list-style:none; }
+  button{ font-family:inherit; cursor:pointer; border:none; background:none; color:inherit; }
+  .wrap{ max-width:var(--container); margin:0 auto; padding:0 24px; }
+  h1,h2,h3{ font-family:var(--display); font-weight:700; letter-spacing:-0.02em; line-height:1.14; }
+  section{ padding:128px 0; }
+  .eyebrow{ font-family:var(--mono); font-size:11.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--accent-bright); display:flex; align-items:center; gap:10px; margin-bottom:20px; }
+  .eyebrow::before{ content:''; width:24px; height:1px; background:var(--accent); }
+  .btn{ display:inline-flex; align-items:center; gap:10px; font-weight:600; font-size:15px; padding:15px 28px; border-radius:40px; transition:.2s; }
+  .btn-primary{ background:var(--accent); color:#fff; }
+  .btn-primary:hover{ background:var(--accent-dim); transform:translateY(-2px); }
+  .btn-ghost{ border:1px solid var(--line-strong); color:var(--ink); }
+  .btn-ghost:hover{ border-color:var(--accent); color:var(--accent-bright); }
+
+  header.nav{ position:sticky; top:0; z-index:50; background:rgba(250,248,243,0.86); backdrop-filter:blur(12px); border-bottom:1px solid var(--line); }
+  .nav-inner{ display:flex; align-items:center; justify-content:space-between; height:64px; }
+  .logo{ font-family:var(--display); font-weight:700; font-size:19px; letter-spacing:-.02em; }
+  .logo span{ color:var(--accent-bright); }
+  .nav-cta{ font-size:14px; font-weight:600; }
+
+  .hero{ padding:150px 0 120px; position:relative; }
+  .hero::after{ content:''; position:absolute; top:-15%; right:-8%; width:520px; height:520px; background:radial-gradient(circle,var(--accent-wash),transparent 70%); z-index:-1; }
+  .hero h1{ font-size:clamp(33px,5.6vw,56px); max-width:17ch; margin-bottom:24px; }
+  .hero h1 em{ font-style:normal; color:var(--accent-bright); }
+  .hero p.lead{ font-size:clamp(17px,2.4vw,20px); color:var(--ink-dim); max-width:52ch; margin-bottom:36px; }
+  .hero-actions{ display:flex; gap:14px; flex-wrap:wrap; }
+
+  .pain{ background:var(--bg-soft); }
+  .pain-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:28px; margin-top:64px; }
+  .pain-card{ background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:30px; }
+  .pain-card h3{ font-size:18px; margin-bottom:10px; color:var(--ink); }
+  .pain-card p{ color:var(--muted); font-size:15px; }
+  .pain-card .x{ color:var(--accent-bright); font-family:var(--mono); font-size:13px; margin-bottom:14px; display:block; }
+
+  .lead-head{ max-width:22ch; font-size:clamp(26px,4vw,40px); margin-bottom:16px; }
+  .sub{ color:var(--ink-dim); max-width:56ch; font-size:17px; }
+
+  .sol-list{ display:grid; gap:20px; margin-top:60px; max-width:720px; }
+  .sol-item{ display:flex; gap:18px; align-items:flex-start; padding:24px; border:1px solid var(--line); border-radius:16px; background:var(--surface); }
+  .sol-item .num{ font-family:var(--mono); color:var(--accent-bright); font-size:14px; padding-top:2px; }
+  .sol-item h3{ font-size:17px; margin-bottom:6px; }
+  .sol-item p{ color:var(--muted); font-size:15px; }
+
+  .svc-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:16px; overflow:hidden; margin-top:60px; }
+  .svc{ background:var(--surface); padding:32px 26px; }
+  .svc h3{ font-size:17px; margin-bottom:8px; }
+  .svc p{ color:var(--muted); font-size:14.5px; }
+  .svc .price{ font-family:var(--mono); color:var(--accent-bright); font-size:14px; margin-top:14px; display:block; }
+
+  .trust{ background:var(--bg-soft); text-align:center; }
+  .trust-quote{ font-family:var(--display); font-weight:600; font-size:clamp(22px,3.4vw,32px); max-width:22ch; margin:0 auto 24px; line-height:1.3; }
+  .trust-quote em{ font-style:normal; color:var(--accent-bright); }
+  .stars{ color:var(--accent-bright); letter-spacing:3px; margin-bottom:10px; }
+  .trust-name{ color:var(--muted); font-size:14px; font-family:var(--mono); }
+
+  .final{ text-align:center; position:relative; }
+  .final::after{ content:''; position:absolute; inset:0; background:radial-gradient(circle at 50% 0,var(--accent-wash),transparent 60%); z-index:-1; }
+  .final h2{ font-size:clamp(30px,5vw,46px); max-width:20ch; margin:0 auto 22px; }
+  .final h2 em{ font-style:normal; color:var(--accent-bright); }
+  .final p{ color:var(--ink-dim); max-width:48ch; margin:0 auto 34px; font-size:18px; }
+
+  footer{ border-top:1px solid var(--line); padding:44px 0; color:var(--muted); font-size:14px; }
+  .foot-inner{ display:flex; flex-wrap:wrap; gap:20px; justify-content:space-between; align-items:center; }
+  .foot-inner a:hover{ color:var(--accent-bright); }
+  .foot-contact{ display:flex; gap:22px; flex-wrap:wrap; }
+  .made{ font-size:12px; color:var(--muted); }
+  .made a{ color:var(--accent-bright); }
+
+  /* lang switch */
+  .nav-right{ display:flex; align-items:center; gap:14px; }
+  .lang-switch{ display:inline-flex; border:1px solid var(--line-strong); border-radius:40px; overflow:hidden; }
+  .lang-switch button{ font-family:var(--mono); font-size:12px; font-weight:600; padding:6px 11px; color:var(--muted); letter-spacing:.04em; transition:.15s; }
+  .lang-switch button:hover{ color:var(--ink); }
+  html[lang="es"] .lang-switch [data-set="es"], html[lang="ca"] .lang-switch [data-set="ca"]{ background:var(--accent); color:#fff; }
+  [data-l]{ display:none; }
+  html[lang="es"] [data-l="es"], html[lang="ca"] [data-l="ca"]{ display:revert; }
+
+  /* scroll reveal */
+  @media (prefers-reduced-motion:no-preference){
+    [data-reveal]{ opacity:0; transform:translateY(28px); transition:opacity .7s cubic-bezier(.16,.84,.44,1), transform .7s cubic-bezier(.16,.84,.44,1); will-change:opacity,transform; }
+    [data-reveal].is-visible{ opacity:1; transform:none; }
+  }</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <div class="logo">[NOMBRE<span>_</span>NEGOCIO]</div>
+    <div class="nav-right">
+      <div class="lang-switch"><button type="button" data-set="es">ES</button><button type="button" data-set="ca">CA</button></div>
+      <a class="nav-cta btn btn-primary" href="[WHATSAPP]"><span data-l="es">Reservar sesión</span><span data-l="ca">Reserva sessió</span></a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow"><span data-l="es">Psicología · [CIUDAD]</span><span data-l="ca">Psicologia · [CIUDAD]</span></div>
+      <h1><span data-l="es">Pedir ayuda <em>no es rendirse. Es empezar a cuidarte.</em></span><span data-l="ca">Demanar ajuda <em>no és rendir-se. És començar a cuidar-te.</em></span></h1>
+      <p class="lead"><span data-l="es">Un espacio tranquilo y confidencial donde poder hablar sin que nadie te juzgue. No hace falta estar "muy mal" para venir. Basta con querer estar mejor.</span><span data-l="ca">Un espai tranquil i confidencial on poder parlar sense que ningú et jutgi. No cal estar "molt malament" per venir. N'hi ha prou amb voler estar millor.</span></p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="[WHATSAPP]"><span data-l="es">Reserva tu primera sesión</span><span data-l="ca">Reserva la teva primera sessió</span></a>
+        <a class="btn btn-ghost" href="#terapia"><span data-l="es">Cómo es la terapia</span><span data-l="ca">Com és la teràpia</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="pain">
+    <div class="wrap">
+      <div class="eyebrow"><span data-l="es">Lo que te frena</span><span data-l="ca">El que et frena</span></div>
+      <h2 class="lead-head"><span data-l="es">No das el paso, y no es por falta de ganas.</span><span data-l="ca">No fas el pas, i no és per manca de ganes.</span></h2>
+      <p class="sub"><span data-l="es">Son las dudas de siempre. Vamos a quitártelas una a una:</span><span data-l="ca">Són els dubtes de sempre. Te'ls traurem un a un:</span></p>
+      <div class="pain-grid">
+        <div class="pain-card"><span class="x"><span data-l="es">— DUDA 01</span><span data-l="ca">— DUBTE 01</span></span><h3><span data-l="es">"¿Y si piensan que estoy mal?"</span><span data-l="ca">"I si pensen que estic malament?"</span></h3><p><span data-l="es">Ir a terapia es tan normal como ir al fisio. Lo raro es cargar solo con todo durante años.</span><span data-l="ca">Anar a teràpia és tan normal com anar al fisio. L'estrany és carregar-ho tot tu sol durant anys.</span></p></div>
+        <div class="pain-card"><span class="x"><span data-l="es">— DUDA 02</span><span data-l="ca">— DUBTE 02</span></span><h3><span data-l="es">"¿De qué voy a hablar?"</span><span data-l="ca">"De què parlaré?"</span></h3><p><span data-l="es">No necesitas tenerlo claro. Empezamos por donde tú puedas y vamos avanzando a tu ritmo.</span><span data-l="ca">No cal que ho tinguis clar. Comencem per on tu puguis i anem avançant al teu ritme.</span></p></div>
+        <div class="pain-card"><span class="x"><span data-l="es">— DUDA 03</span><span data-l="ca">— DUBTE 03</span></span><h3><span data-l="es">"¿Esto sirve de algo?"</span><span data-l="ca">"Això serveix d'alguna cosa?"</span></h3><p><span data-l="es">La terapia no son consejos. Son herramientas concretas para que notes cambios en tu día a día.</span><span data-l="ca">La teràpia no són consells. Són eines concretes perquè notis canvis en el teu dia a dia.</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="terapia">
+    <div class="wrap">
+      <div class="eyebrow"><span data-l="es">Cómo trabajamos</span><span data-l="ca">Com treballem</span></div>
+      <h2 class="lead-head"><span data-l="es">Tu proceso, a tu ritmo.</span><span data-l="ca">El teu procés, al teu ritme.</span></h2>
+      <p class="sub"><span data-l="es">Sin presión, sin diagnósticos que te etiquetan. Un acompañamiento cercano.</span><span data-l="ca">Sense pressió, sense diagnòstics que t'etiqueten. Un acompanyament proper.</span></p>
+      <div class="sol-list">
+        <div class="sol-item"><span class="num">01</span><div><h3><span data-l="es">Primera sesión sin compromiso</span><span data-l="ca">Primera sessió sense compromís</span></h3><p><span data-l="es">Nos conocemos, me cuentas qué te trae y vemos si encajamos. Aquí no te comprometes a nada.</span><span data-l="ca">Ens coneixem, em contes què et porta i veiem si encaixem. Aquí no et compromets a res.</span></p></div></div>
+        <div class="sol-item"><span class="num">02</span><div><h3><span data-l="es">Entendemos qué te pasa</span><span data-l="ca">Entenem què et passa</span></h3><p><span data-l="es">No solo el síntoma. El porqué. Para poder trabajar sobre la raíz, no sobre el parche.</span><span data-l="ca">No només el símptoma. El perquè. Per poder treballar sobre l'arrel, no sobre el pedaç.</span></p></div></div>
+        <div class="sol-item"><span class="num">03</span><div><h3><span data-l="es">Herramientas para tu día a día</span><span data-l="ca">Eines per al teu dia a dia</span></h3><p><span data-l="es">Estrategias prácticas que puedes usar fuera de la consulta, cuando de verdad hacen falta.</span><span data-l="ca">Estratègies pràctiques que pots fer servir fora de la consulta, quan de veritat calen.</span></p></div></div>
+        <div class="sol-item"><span class="num">04</span><div><h3><span data-l="es">Total confidencialidad</span><span data-l="ca">Confidencialitat total</span></h3><p><span data-l="es">Lo que se habla aquí, se queda aquí. Siempre. Es la base de todo.</span><span data-l="ca">El que es parla aquí, es queda aquí. Sempre. És la base de tot.</span></p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pain">
+    <div class="wrap">
+      <div class="eyebrow"><span data-l="es">En qué te acompaño</span><span data-l="ca">En què t'acompanyo</span></div>
+      <h2 class="lead-head"><span data-l="es">Áreas de terapia</span><span data-l="ca">Àrees de teràpia</span></h2>
+      <div class="svc-grid">
+        <div class="svc"><h3><span data-l="es">Ansiedad y estrés</span><span data-l="ca">Ansietat i estrès</span></h3><p><span data-l="es">Para cuando la cabeza no para y el cuerpo lo nota.</span><span data-l="ca">Per quan el cap no para i el cos ho nota.</span></p><span class="price"><span data-l="es">Sesión [PRECIO]</span><span data-l="ca">Sessió [PRECIO]</span></span></div>
+        <div class="svc"><h3><span data-l="es">Autoestima</span><span data-l="ca">Autoestima</span></h3><p><span data-l="es">Dejar de ser tu peor crítico y empezar a quererte.</span><span data-l="ca">Deixar de ser el teu pitjor crític i començar a estimar-te.</span></p><span class="price"><span data-l="es">Sesión [PRECIO]</span><span data-l="ca">Sessió [PRECIO]</span></span></div>
+        <div class="svc"><h3><span data-l="es">Duelo y pérdidas</span><span data-l="ca">Dol i pèrdues</span></h3><p><span data-l="es">Acompañarte cuando algo o alguien ya no está.</span><span data-l="ca">Acompanyar-te quan alguna cosa o algú ja no hi és.</span></p><span class="price"><span data-l="es">Sesión [PRECIO]</span><span data-l="ca">Sessió [PRECIO]</span></span></div>
+        <div class="svc"><h3><span data-l="es">Relaciones y pareja</span><span data-l="ca">Relacions i parella</span></h3><p><span data-l="es">Entender vínculos, poner límites, comunicarte mejor.</span><span data-l="ca">Entendre vincles, posar límits, comunicar-te millor.</span></p><span class="price"><span data-l="es">Sesión [PRECIO]</span><span data-l="ca">Sessió [PRECIO]</span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust">
+    <div class="wrap">
+      <div class="stars">★★★★★</div>
+      <p class="trust-quote"><span data-l="es">"Tardé dos años en pedir cita y solo me arrepiento de no haberlo hecho antes. <em>Por fin siento que respiro.</em>"</span><span data-l="ca">"Vaig trigar dos anys a demanar cita i només em penedeixo de no haver-ho fet abans. <em>Per fi sento que respiro.</em>"</span></p>
+      <p class="trust-name">— [NOMBRE_CLIENTE], <span data-l="es">reseña Google</span><span data-l="ca">ressenya Google</span></p>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap">
+      <div class="eyebrow" style="justify-content:center"><span data-l="es">El primer paso</span><span data-l="ca">El primer pas</span></div>
+      <h2><span data-l="es">Hoy puede ser el día <em>en que dejas de aguantar solo.</em></span><span data-l="ca">Avui pot ser el dia <em>en què deixes d'aguantar tot sol.</em></span></h2>
+      <p><span data-l="es">Escríbeme y hablamos. Sin compromiso, sin juicios. A tu ritmo desde el minuto uno.</span><span data-l="ca">Escriu-me i parlem. Sense compromís, sense judicis. Al teu ritme des del minut u.</span></p>
+      <a class="btn btn-primary" href="[WHATSAPP]"><span data-l="es">Reserva ahora</span><span data-l="ca">Reserva ara</span></a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <div>
+      <div class="logo" style="margin-bottom:8px">[NOMBRE_NEGOCIO]</div>
+      <div class="foot-contact">
+        <a href="tel:[TELEFONO]">[TELEFONO]</a>
+        <a href="mailto:[EMAIL]">[EMAIL]</a>
+        <span>[DIRECCION], [CIUDAD]</span>
+      </div>
+    </div>
+    <div class="made"><span data-l="es">Web hecha por</span><span data-l="ca">Web feta per</span> <a href="https://73webs.com">73webs</a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var s=localStorage.getItem('lang');
+  if(s==='ca'||s==='es') document.documentElement.lang=s;
+  document.addEventListener('click',function(e){
+    var b=e.target.closest&&e.target.closest('[data-set]'); if(!b) return;
+    var l=b.getAttribute('data-set'); document.documentElement.lang=l;
+    try{localStorage.setItem('lang',l);}catch(_){}
+  });
+})();
+</script>
+<script>
+(function(){
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var sel = '.hero .eyebrow, .hero h1, .hero p.lead, .hero-actions, section > .wrap > .eyebrow, .lead-head, .sub, .pain-card, .sol-item, .svc, .trust-quote, .stars, .trust-name, .final h2, .final p';
+  var els = Array.prototype.slice.call(document.querySelectorAll(sel));
+  els.forEach(function(el){ el.setAttribute('data-reveal',''); });
+  document.querySelectorAll('.pain-grid, .sol-list, .svc-grid').forEach(function(grid){
+    Array.prototype.slice.call(grid.children).forEach(function(child,i){
+      child.style.transitionDelay = (i*90)+'ms';
+    });
+  });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('is-visible'); io.unobserve(e.target); }
+    });
+  },{ threshold:0.12, rootMargin:'0px 0px -8% 0px' });
+  els.forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>
