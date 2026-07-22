@@ -134,12 +134,55 @@
 
   /* lang switch */
   .nav-right{ display:flex; align-items:center; gap:14px; }
-  .lang-switch{ display:inline-flex; border:1px solid var(--line-strong); border-radius:40px; overflow:hidden; }
-  .lang-switch button{ font-family:var(--mono); font-size:12px; font-weight:600; padding:6px 11px; color:var(--muted); letter-spacing:.04em; transition:.15s; }
+  .lang-switch{ position:fixed; bottom:18px; right:18px; z-index:60; display:inline-flex; border:1px solid var(--line-strong); border-radius:999px; overflow:hidden; background:var(--surface); box-shadow:0 6px 24px rgba(14,30,43,.16); }
+  .lang-switch button{ font-family:var(--mono); font-size:12px; font-weight:600; padding:9px 14px; color:var(--muted); letter-spacing:.04em; transition:.15s; }
   .lang-switch button:hover{ color:var(--ink); }
   html[lang="es"] .lang-switch [data-set="es"], html[lang="ca"] .lang-switch [data-set="ca"]{ background:var(--accent); color:#fff; }
   [data-l]{ display:none; }
   html[lang="es"] [data-l="es"], html[lang="ca"] [data-l="ca"]{ display:revert; }
+
+  /* fondo animado — burbujas limpias */
+  .bg-anim{ position:fixed; inset:0; z-index:0; overflow:hidden; pointer-events:none; }
+  main, footer{ position:relative; z-index:1; }
+  .bg-anim::before{ content:''; position:absolute; width:560px; height:560px; top:-12%; right:-10%; border-radius:50%; background:radial-gradient(circle, rgba(20,184,166,.10), transparent 70%); }
+  .bg-anim span{ position:absolute; top:105%; border-radius:50%; background:rgba(20,184,166,.10); border:1px solid rgba(20,184,166,.22); }
+  .bg-anim span:nth-child(1){ width:46px; height:46px; left:12%; }
+  .bg-anim span:nth-child(2){ width:26px; height:26px; left:46%; }
+  .bg-anim span:nth-child(3){ width:64px; height:64px; left:78%; }
+  @media (prefers-reduced-motion:no-preference){
+    .bg-anim span{ animation:bubble-up 18s linear infinite; }
+    .bg-anim span:nth-child(2){ animation-duration:14s; animation-delay:-6s; }
+    .bg-anim span:nth-child(3){ animation-duration:23s; animation-delay:-11s; }
+  }
+  @keyframes bubble-up{ 0%{ transform:translateY(0); opacity:0; } 10%{ opacity:1; } 100%{ transform:translateY(-130vh); opacity:0; } }
+
+  /* formulario */
+  .form{ max-width:680px; margin:0 auto; text-align:left; display:grid; gap:18px; }
+  .form-row{ display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+  .field label, .field legend{ display:block; font-weight:600; font-size:14px; margin-bottom:8px; }
+  .field input, .field textarea{ width:100%; background:var(--surface); border:1px solid var(--line-strong); border-radius:12px; padding:13px 14px; color:var(--ink); font-family:var(--sans); font-size:15px; transition:border-color .15s; }
+  .field input:focus, .field textarea:focus{ outline:none; border-color:var(--accent); }
+  .field textarea{ resize:vertical; }
+  fieldset.field{ border:0; padding:0; margin:0; }
+  .checks{ display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:10px; }
+  label.check{ display:flex; align-items:center; gap:10px; padding:12px 14px; border:1px solid var(--line-strong); border-radius:12px; background:var(--surface); font-size:14.5px; font-weight:500; cursor:pointer; transition:.15s; margin-bottom:0; }
+  label.check input{ accent-color:var(--accent); width:16px; height:16px; margin:0; flex:none; }
+  label.check:has(input:checked){ border-color:var(--accent); background:var(--accent-wash); }
+  .form-actions{ display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin-top:6px; }
+
+  /* responsive */
+  @media (max-width:720px){
+    section{ padding:88px 0; }
+    .hero{ padding:104px 0 72px; }
+    .nav-inner{ height:58px; }
+    .nav-cta{ padding:11px 16px; font-size:13px; }
+    .hero-actions{ width:100%; }
+    .hero-actions .btn{ flex:1 1 auto; justify-content:center; }
+    .form-row{ grid-template-columns:1fr; }
+    .foot-inner{ flex-direction:column; align-items:flex-start; }
+    .lang-switch{ bottom:14px; right:14px; }
+  }
+  @media (max-width:380px){ .wrap{ padding:0 18px; } }
 
   /* scroll reveal */
   @media (prefers-reduced-motion:no-preference){
@@ -149,11 +192,12 @@
 </head>
 <body>
 
+<div class="bg-anim" aria-hidden="true"><span></span><span></span><span></span></div>
+
 <header class="nav">
   <div class="wrap nav-inner">
     <div class="logo">[NOMBRE<span>_</span>NEGOCIO]</div>
     <div class="nav-right">
-      <div class="lang-switch"><button type="button" data-set="es">ES</button><button type="button" data-set="ca">CA</button></div>
       <a class="nav-cta btn btn-primary" href="[WHATSAPP]"><span data-l="es">Pedir cita</span><span data-l="ca">Demana cita</span></a>
     </div>
   </div>
@@ -225,7 +269,29 @@
       <div class="eyebrow" style="justify-content:center"><span data-l="es">Empieza hoy</span><span data-l="ca">Comença avui</span></div>
       <h2><span data-l="es">Tu boca merece una clínica <em>que juegue limpio.</em></span><span data-l="ca">La teva boca es mereix una clínica <em>que jugui net.</em></span></h2>
       <p><span data-l="es">Primera visita sin compromiso. Te decimos qué necesitas y cuánto cuesta, sin rodeos.</span><span data-l="ca">Primera visita sense compromís. Et diem què necessites i quant costa, sense giragonses.</span></p>
-      <a class="btn btn-primary" href="[WHATSAPP]"><span data-l="es">Reserva ahora</span><span data-l="ca">Reserva ara</span></a>
+      <form class="form" action="https://formsubmit.co/[EMAIL]" method="POST">
+        <input type="hidden" name="_subject" value="Nueva solicitud de visita desde la web">
+        <input type="hidden" name="_captcha" value="false">
+        <div class="form-row">
+          <div class="field"><label for="f-nombre"><span data-l="es">Nombre</span><span data-l="ca">Nom</span></label><input id="f-nombre" name="nombre" type="text" required autocomplete="name"></div>
+          <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" required autocomplete="email"></div>
+        </div>
+        <div class="field"><label for="f-tel"><span data-l="es">Teléfono (opcional)</span><span data-l="ca">Telèfon (opcional)</span></label><input id="f-tel" name="telefono" type="tel" autocomplete="tel"></div>
+        <fieldset class="field">
+          <legend><span data-l="es">¿Qué tratamiento te interesa?</span><span data-l="ca">Quin tractament t'interessa?</span></legend>
+          <div class="checks">
+            <label class="check"><input type="checkbox" name="servicio" value="Limpieza y prevención"><span><span data-l="es">Limpieza y prevención</span><span data-l="ca">Neteja i prevenció</span></span></label>
+            <label class="check"><input type="checkbox" name="servicio" value="Empastes y endodoncia"><span><span data-l="es">Empastes y endodoncia</span><span data-l="ca">Empastaments i endodòncia</span></span></label>
+            <label class="check"><input type="checkbox" name="servicio" value="Ortodoncia e Invisalign"><span><span data-l="es">Ortodoncia e Invisalign</span><span data-l="ca">Ortodòncia i Invisalign</span></span></label>
+            <label class="check"><input type="checkbox" name="servicio" value="Implantes y estética"><span><span data-l="es">Implantes y estética</span><span data-l="ca">Implants i estètica</span></span></label>
+          </div>
+        </fieldset>
+        <div class="field"><label for="f-msg"><span data-l="es">Cuéntanos qué te pasa</span><span data-l="ca">Explica'ns què et passa</span></label><textarea id="f-msg" name="mensaje" rows="4" required></textarea></div>
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit"><span data-l="es">Pedir primera visita</span><span data-l="ca">Demana la primera visita</span></button>
+          <a class="btn btn-ghost" href="[WHATSAPP]"><span data-l="es">O por WhatsApp</span><span data-l="ca">O per WhatsApp</span></a>
+        </div>
+      </form>
     </div>
   </section>
 </main>
@@ -243,6 +309,8 @@
     <div class="made"><span data-l="es">Web hecha por</span><span data-l="ca">Web feta per</span> <a href="https://73webs.com">73webs</a></div>
   </div>
 </footer>
+
+<div class="lang-switch"><button type="button" data-set="es">ES</button><button type="button" data-set="ca">CA</button></div>
 
 <script>
 (function(){

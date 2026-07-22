@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(start *)",
+      "Bash(cp -f 'C:\\\\Users\\\\micro\\\\Documents\\\\ClaudeCodeEspacio\\\\73webs.com/404.html' 'C:\\\\Users\\\\micro\\\\Documents\\\\ClaudeCodeEspacio\\\\73webs.com/aviso-legal.html' 'C:\\\\Users\\\\micro\\\\Documents\\\\ClaudeCodeEspacio\\\\73webs.com/index.html' 'C:\\\\Users\\\\micro\\\\Documents\\\\ClaudeCodeEspacio\\\\73webs.com/politica-cookies.html' 'C:\\\\Users\\\\micro\\\\Documents\\\\ClaudeCodeEspacio\\\\73webs.com/politica-privacidad.html' 'C:\\\\Users\\\\micro\\\\Documents\\\\ClaudeCodeEspacio\\\\73webs.com/robots.txt' 'C:\\\\Users\\\\micro\\\\Documents\\\\ClaudeCodeEspacio\\\\73webs.com/sitemap.xml' 'C:\\\\Users\\\\micro\\\\Documents\\\\ClaudeCodeEspacio\\\\73webs.com/skills-lock.json' 'C:\\\\Users\\\\micro\\\\Documents\\\\ClaudeCodeEspacio\\\\73webs.com/terminos-condiciones.html' 'C:\\\\Users\\\\micro\\\\Documents\\\\GitHub\\\\73webs.com/')",
+      "Bash(cp -rf 'C:\\\\Users\\\\micro\\\\Documents\\\\ClaudeCodeEspacio\\\\73webs.com/clientes' 'C:\\\\Users\\\\micro\\\\Documents\\\\GitHub\\\\73webs.com/')",
+      "Bash(cp -rf 'C:\\\\Users\\\\micro\\\\Documents\\\\ClaudeCodeEspacio\\\\73webs.com/css' 'C:\\\\Users\\\\micro\\\\Documents\\\\GitHub\\\\73webs.com/')",
+      "Bash(cp -rf 'C:\\\\Users\\\\micro\\\\Documents\\\\ClaudeCodeEspacio\\\\73webs.com/fonts' 'C:\\\\Users\\\\micro\\\\Documents\\\\GitHub\\\\73webs.com/')",
+      "Bash(cp -rf 'C:\\\\Users\\\\micro\\\\Documents\\\\ClaudeCodeEspacio\\\\73webs.com/img' 'C:\\\\Users\\\\micro\\\\Documents\\\\GitHub\\\\73webs.com/')",
+      "Bash(python -m http.server 8080)",
+      "Read(//c/Users/micro/Documents/GitHub/73webs.com/**)",
+      "Bash(cp -rf /c/Users/micro/Documents/ClaudeCodeEspacio/73webs.com/index.html /c/Users/micro/Documents/GitHub/73webs.com/index.html)",
+      "Read(//c/Users/micro/Documents/ClaudeCodeEspacio/73webs.com/**)",
+      "PowerShell($d=\"C:\\\\Users\\\\micro\\\\Documents\\\\ClaudeCodeEspacio\\\\73webs.com\\\\clientes\"; \"index.html\",\"tatuador.html\",\"dentista.html\",\"psicologo.html\",\"barbero.html\",\"fisioterapeuta.html\",\"peluqueria-estetica.html\",\"abogado.html\" | ForEach-Object { Start-Process \\(Join-Path $d $_\\) })"
+    ]
+  }
+}
